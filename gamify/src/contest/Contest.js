@@ -15,12 +15,18 @@ export default function Contest() {
     const [languagesIsClicked, setLanguagesIsClicked] = useState(false);
     const [geographyIsClicked, setGeographyIsClicked] = useState(false);
     const [historyIsClicked, setHistoryIsClicked] = useState(false);
+    const [errorActivated, setErrorActivated] = useState(false);
 
     let navigate = useNavigate();
 
     const goToNextPage = () => {
-        navigate('/choiceOfContestants');
+        if(scienceIsClicked || mathIsClicked || languagesIsClicked || geographyIsClicked || historyIsClicked){
+            navigate('/choiceOfContestants');
+        } else {
+            setErrorActivated(true);
+        }
     }
+
     const goBack = () => {
         navigate('/mainPage');
     }
@@ -30,8 +36,7 @@ export default function Contest() {
     }
 
     const handleSelection = (event) => {
-        localStorage.setItem("selectedSubjectForContest", JSON.stringify(event.target.value));
-        console.log(JSON.parse(localStorage.getItem("selectedSubjectForContest")))
+        localStorage.setItem("subjectForContest", JSON.stringify(event.target.value));
         if(event.target.value === "Science"){
             setScienceIsClicked(true);
             setMathIsClicked(false);
@@ -63,7 +68,6 @@ export default function Contest() {
             setGeographyIsClicked(false);
             setHistoryIsClicked(true);
         }
-
     }
 
     return(
@@ -103,6 +107,10 @@ export default function Contest() {
                     <button className={languagesIsClicked ? "subject-button-clicked" : "subject-button"} value={"Languages"} onClick={handleSelection}> Languages </button>
                     <button className={geographyIsClicked ? "subject-button-clicked" : "subject-button"} value={"Geography"} onClick={handleSelection}> Geography </button>
                     <button className={historyIsClicked ? "subject-button-clicked" : "subject-button"} value={"History"} onClick={handleSelection}> History </button>
+                    {errorActivated ?
+                        <label style={{margin: 10, color: "red"}}> You have to choose a subject </label>
+                        : null
+                    }
                     <div>
                         <button className="go-back-button" onClick={goBack}> Go back </button>
                         <button className="next-button" onClick={goToNextPage}> Next </button>
