@@ -245,7 +245,27 @@
   font-size: calc(5px + 2vmin);
   color: white;
   position: relative;
-  left: -20vw;
+  left:20px;
+}
+
+.navBarStreak{
+  font-weight: bold;
+  font-style: italic;
+  top: 0.5vh;
+  font-size: calc(2px + 2vmin);
+  color: white;
+  position: relative;
+  left: 450px;
+}
+
+.navBarNotification{
+  font-weight: bold;
+  font-style: italic;
+  top: 0.5vh;
+  font-size: calc(2px + 2vmin);
+  color: white;
+  position: relative;
+  left: 850px;
 }
 
 .myLogo{
@@ -340,7 +360,7 @@
 .navbarButton{
   transition: all .5s ease;
   position: relative;
-  left: 1600px;
+  left: 1300px;
 
   align-items: center;
   display: inline;
@@ -366,7 +386,7 @@
 
   transition: all .5s ease;
   position: relative;
-  left: 1600px;
+  left: 1300px;
   align-items: center;
   display: inline;
   flex-direction: row;
@@ -673,15 +693,7 @@
   background: linear-gradient(0deg, #21726A 0%, #33B3A6 100%);
 }
 
-.navBarTitle{
-  font-weight: bold;
-  font-style: italic;
-  top: 0.5vh;
-  font-size: calc(5px + 2vmin);
-  color: white;
-  position: relative;
-  left: -20vw;
-}
+
 
 
 .navbarButton{
