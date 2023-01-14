@@ -1,0 +1,110 @@
+.subject-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #A31ACB;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    height: 80px;
+    margin: 10px;
+}
+
+.subject-button:hover {
+    transform: scale(1.1);
+}
+
+.subject-button-clicked {
+    transform: scale(1.1);
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: #A31ACB;
+    background: white;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    height: 80px;
+    margin: 10px;
+}
+
+.go-back-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #FF78F0;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    height: 80px;
+    margin: 5px;
+    left: -50vh;
+}
+
+.go-back-button:hover {
+    transform: scale(1.1);
+}
+
+.next-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #FF78F0;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    height: 80px;
+    margin: 5px;
+    right: -50vh;
+}
+
+.next-button:hover {
+    transform: scale(1.1);
+}
