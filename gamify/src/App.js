@@ -32,6 +32,7 @@ import ClassicQuizPage3 from "./quiz/ClassicQuizPage3";
 import DragAndDrop from "./dragAndDrop/DragAndDrop";
 
 
+
 function App() {
   return (
       <Router>
@@ -69,6 +70,7 @@ function App() {
 
             {/* Drag & Drop quizz */}
             <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
+
 
         </Routes>
       </Router>
