@@ -61,6 +61,8 @@ function MainPage() {
                     </SubMenu>
                     <SubMenu title="Courses" onClick={() => navigate("/chooseCourseSubject")}>
                     </SubMenu>
+                    <SubMenu title="Contest" onClick={() => navigate("/contest")}>
+                    </SubMenu>
                 </Menu>
             </ProSidebar>
             <div className="App" style={{fontFamily:"poppins"}}>
