@@ -8,6 +8,8 @@ import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import {useState} from "react";
 import { Dot } from 'react-animated-dots';
+import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
+import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
 
 
 export default function WaitingForPeople() {
@@ -28,6 +30,8 @@ export default function WaitingForPeople() {
         }
     }
 
+    console.log("***" + JSON.parse(localStorage.getItem("numberOfPlayers")))
+
     useEffect(() => {
         const interval = setInterval(() => {
             setNoOfContestants(noOfContestants + 1)
@@ -47,39 +51,10 @@ export default function WaitingForPeople() {
         }
     }
 
-    const logOut = () => {
-        navigate('/');
-    }
-
     return(
         <div>
-            <Navbar sticky="top" className="navbar" style={{fontFamily: "poppins"}}>
-                <div>
-                    <p className="navBarTitle" style={{display: "inline", color: "white"}}>EnergX</p>
-                    <button className="navbarButton" onClick={logOut}> Log out</button>
-                </div>
-            </Navbar>
-            <ProSidebar style={{
-                marginTop: 48,
-                position: "fixed",
-                fontFamily: "poppins",
-                sticky: "top",
-                width: "150px",
-                minWidth: "150px",
-                fontSize: "20px",
-            }} className="mySideBar">
-                <Menu iconShape="square">
-                    <MenuItem onClick={() => {}}>Menu</MenuItem>
-                    <SubMenu title="Games">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Classic quiz</MenuItem>
-                        <MenuItem onClick={() => {}}> Drag & Drop</MenuItem>
-                    </SubMenu>
-                    <SubMenu title="Courses">
-                        <MenuItem onClick={() => navigate("/admin/devices")}> English</MenuItem>
-                        <MenuItem onClick={() => {}}> IT</MenuItem>
-                    </SubMenu>
-                </Menu>
-            </ProSidebar>
+            <NavbarCustom/>
+            <SidebarCustom/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h1> {subject} </h1>
