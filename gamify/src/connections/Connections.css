@@ -1,0 +1,122 @@
+.search-user-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 500px;
+    height: fit-content;
+}
+
+.send-request-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    background:  #A31ACB;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 300px;
+    height: fit-content;
+    margin-left: 20px;
+    border-radius: 40px;
+}
+
+.send-request-button:hover{
+    transform: scale(1.05);
+}
+
+.request-sent-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    background:  #F5EA5A;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 300px;
+    height: fit-content;
+    margin-left: 20px;
+    border-radius: 40px;
+}
+
+.removed-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    background:  #F5EA5A;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 300px;
+    height: fit-content;
+    margin-left: 20px;
+    border-radius: 40px;
+}
+
+.users-list {
+    margin: 10px;
+    padding: 4px;
+    height: 430px;
+    width: 700px;
+    overflow: scroll;
+    background: transparent;
+}
+
+.connections-list {
+    margin: 10px;
+    padding: 4px;
+    height: 363px;
+    width: 700px;
+    overflow: scroll;
+    background: transparent;
+}
+
+.two-cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+    height: 500px;
+}
+
+.connection-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
