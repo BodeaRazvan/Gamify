@@ -14,8 +14,12 @@ import Contest from "./contest/Contest";
 import ChoiceOfContestants from "./contest/ChoiceOfContestants";
 import WaitingForPeople from "./contest/WaitingForPeople";
 import ChooseFriends from "./contest/ChooseFriends";
+
+import ContestGettingReady from "./contest/ContestGettingReady";
+
 import UserProfile from "./profile/UserProfile";
 import AvatarPage from "./profile/AvatarPage";
+
 
 function App() {
   return (
@@ -31,6 +35,7 @@ function App() {
             <Route path="/choiceOfContestants" element={<ChoiceOfContestants/>} />
             <Route path="/waitingForPeople" element={<WaitingForPeople/>} />
             <Route path="/chooseFriends" element={<ChooseFriends/>} />
+            <Route path="/contestGettingReady" element={<ContestGettingReady/>} />
 
             {/* PROFILE */}
             <Route path="/profile" element={<UserProfile/>} />

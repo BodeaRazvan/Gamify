@@ -12,30 +12,32 @@ import { Dot } from 'react-animated-dots';
 
 export default function WaitingForPeople() {
 
-    const [startEarlierIsClicked, setStartEarlierIsClicked] = useState(false);
     const [subject] = useState(JSON.parse(localStorage.getItem("subjectForContest")));
     const [contestMode] = useState(JSON.parse(localStorage.getItem("contestMode")));
     const [errorActivated, setErrorActivated] = useState(false);
     //const [noOfContestants, setNoOfContestants] = useState(JSON.parse(localStorage.getItem("numberOfContestants")));
     const [noOfContestants, setNoOfContestants] = useState(0);
-    const [ready, setReady] = useState(false);
-    const [timeUntilStartContest, setTimeUntilStartContest] = useState(3000);
 
     let navigate = useNavigate();
 
     const startGame = () => {
         if(noOfContestants >= 2){
-            setReady(true);
-            setInterval(() => {
-                setTimeUntilStartContest(timeUntilStartContest - 1000)
-                if(timeUntilStartContest === 0) {
-                    navigate('/contestProgress');
-                }
-            }, 1000);
+            navigate('/contestGettingReady');
         } else {
             setErrorActivated(true);
         }
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setNoOfContestants(noOfContestants + 1)
+            localStorage.setItem("numberOfPlayers", JSON.stringify(noOfContestants + 1));
+            if(noOfContestants > 8){
+                navigate('/contestGettingReady');
+            }
+        },2000);
+        return () => clearInterval(interval);
+    }, [noOfContestants]);
 
     const goBack = () => {
         if(contestMode === "Global"){
@@ -48,17 +50,6 @@ export default function WaitingForPeople() {
     const logOut = () => {
         navigate('/');
     }
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setNoOfContestants(noOfContestants + 1)
-            localStorage.setItem("numberOfPlayers", JSON.stringify(noOfContestants + 1));
-        }, 1000);
-        if(noOfContestants > 10){
-            startGame()
-        }
-        return () => clearInterval(interval);
-    }, [noOfContestants]);
 
     return(
         <div>
@@ -90,37 +81,27 @@ export default function WaitingForPeople() {
                 </Menu>
             </ProSidebar>
             <div className="App" style={{fontFamily:"poppins"}}>
-                { ready ?
-                    <header className="myHeader">
-                        <div className="one-below-another">
-                            <h2> Be ready! The contest will start in </h2>
-                            <h1> {timeUntilStartContest / 1000} </h1>
-                        </div>
-                    </header>
-                    :
-                    <header className="myHeader">
-                        <h1> {subject} </h1>
-                        <label>
-                            <label style={{margin: 10}}>Waiting for others to join</label>
-                            <Dot>.</Dot><Dot>.</Dot><Dot>.</Dot>
+                <header className="myHeader">
+                    <h1> {subject} </h1>
+                    <label>
+                        <label style={{margin: 10}}>Waiting for others to join</label>
+                        <Dot>.</Dot><Dot>.</Dot><Dot>.</Dot>
+                    </label>
+                    <label style={{margin: 10}}> {noOfContestants + 1}/10 </label>
+                    <button className="start-earlier-button" onClick={startGame}>
+                        Start earlier if you don't want to wait anymore
+                    </button>
+                    {errorActivated ?
+                        <label style={{margin: 10, color: "red"}}>
+                            You have to wait for at least one contestant to join!
                         </label>
-                        <label style={{margin: 10}}> {noOfContestants}/10 </label>
-                        <button
-                            className={startEarlierIsClicked ? "start-earlier-button-clicked" : "start-earlier-button"}
-                            onClick={startGame}>
-                            Start earlier if you don't want to wait anymore
-                        </button>
-                        {errorActivated ?
-                            <label style={{margin: 10, color: "red"}}> You have to wait for at least one contestant to
-                                join! </label>
-                            : null
-                        }
-                        <div>
-                            <button className="go-back-button" onClick={goBack}> Go back</button>
-                            <button className="next-button"> Next</button>
-                        </div>
-                    </header>
-                }
+                        : null
+                    }
+                    <div>
+                        <button className="go-back-button" onClick={goBack}> Go back</button>
+                        <button className="next-button"> Next</button>
+                    </div>
+                </header>
             </div>
         </div>
     );
