@@ -25,6 +25,10 @@ import CoursePage1 from "./course/CoursePage1";
 import CoursePage2 from "./course/CoursePage2";
 import CoursePage3 from "./course/CoursePage3";
 import StatsPage from "./profile/StatsPage";
+import ClassicQuizPage1 from "./quiz/ClassicQuizPage1";
+import ClassicQuiz from "./quiz/ClassicQuiz";
+import ClassicQuizPage2 from "./quiz/ClassicQuizPage2";
+import ClassicQuizPage3 from "./quiz/ClassicQuizPage3";
 
 
 function App() {
@@ -54,6 +58,13 @@ function App() {
             <Route path="/coursePage1" element={<CoursePage1/>} />
             <Route path="/coursePage2" element={<CoursePage2/>} />
             <Route path="/coursePage3" element={<CoursePage3/>} />
+
+            {/* QUIZ */}
+            <Route path="/classicQuiz" element={<ClassicQuiz/>} />
+            <Route path="/classicQuizPage1" element={<ClassicQuizPage1/>} />
+            <Route path="/classicQuizPage2" element={<ClassicQuizPage2/>} />
+            <Route path="/classicQuizPage3" element={<ClassicQuizPage3/>} />
+
 
         </Routes>
       </Router>

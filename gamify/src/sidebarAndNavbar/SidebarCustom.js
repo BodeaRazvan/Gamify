@@ -25,7 +25,7 @@ export default function SidebarCustom() {
                     <SubMenu title="Profile" onClick={() => navigate("/profile")}>
                     </SubMenu>
                     <SubMenu title="Games">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Classic quiz</MenuItem>
+                        <MenuItem onClick={() => navigate("/classicQuiz")}> Classic quiz</MenuItem>
                         <MenuItem onClick={() => {}}> Drag & Drop</MenuItem>
                     </SubMenu>
                     <SubMenu title="Courses" onClick={() => navigate("/chooseCourseSubject")}>
