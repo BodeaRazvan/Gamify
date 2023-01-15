@@ -108,3 +108,62 @@
 .next-button:hover {
     transform: scale(1.1);
 }
+
+.start-earlier-button {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #A31ACB;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+}
+
+.start-earlier-button:hover {
+    transform: scale(1.1);
+}
+
+.start-earlier-button-clicked {
+    transform: scale(1.1);
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: #A31ACB;
+    background: white;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+}
+
+.one-below-another {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -19,7 +19,6 @@ export default function ChoiceOfContestants() {
 
     const goToNextPage= () => {
         if(globalIsClicked){
-            //localStorage.setItem("numberOfContestants", JSON.stringify(0));
             navigate('/waitingForPeople');
         } else if (inviteFriendsIsClicked){
             navigate('/chooseFriends');

@@ -24,6 +24,7 @@ import ChooseCourseCategory from "./course/ChooseCourseCategory";
 import CoursePage1 from "./course/CoursePage1";
 import CoursePage2 from "./course/CoursePage2";
 import CoursePage3 from "./course/CoursePage3";
+import Connections from "./connections/Connections";
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
             <Route path="/waitingForPeople" element={<WaitingForPeople/>} />
             <Route path="/chooseFriends" element={<ChooseFriends/>} />
             <Route path="/contestGettingReady" element={<ContestGettingReady/>} />
+
+            {/* CONNECTIONS */}
+            <Route path="/connections" element={<Connections/>} />
 
             {/* PROFILE */}
             <Route path="/profile" element={<UserProfile/>} />

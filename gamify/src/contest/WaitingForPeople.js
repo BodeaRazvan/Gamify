@@ -1,6 +1,6 @@
 import '../App.css';
 import '../index.css';
-import './WaitingForPeople.css';
+import './Contest.css';
 import {Navbar} from "react-bootstrap";
 import {ProSidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
@@ -17,7 +17,6 @@ export default function WaitingForPeople() {
     const [subject] = useState(JSON.parse(localStorage.getItem("subjectForContest")));
     const [contestMode] = useState(JSON.parse(localStorage.getItem("contestMode")));
     const [errorActivated, setErrorActivated] = useState(false);
-    //const [noOfContestants, setNoOfContestants] = useState(JSON.parse(localStorage.getItem("numberOfContestants")));
     const [noOfContestants, setNoOfContestants] = useState(0);
 
     let navigate = useNavigate();
@@ -29,8 +28,6 @@ export default function WaitingForPeople() {
             setErrorActivated(true);
         }
     }
-
-    console.log("***" + JSON.parse(localStorage.getItem("numberOfPlayers")))
 
     useEffect(() => {
         const interval = setInterval(() => {
