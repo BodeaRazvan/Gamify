@@ -24,6 +24,7 @@ import ChooseCourseCategory from "./course/ChooseCourseCategory";
 import CoursePage1 from "./course/CoursePage1";
 import CoursePage2 from "./course/CoursePage2";
 import CoursePage3 from "./course/CoursePage3";
+import StatsPage from "./profile/StatsPage";
 
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
             {/* PROFILE */}
             <Route path="/profile" element={<UserProfile/>} />
             <Route path="/avatar" element={<AvatarPage/>} />
-
+            <Route path="/stats" element={<StatsPage/>} />
 
             {/* COURSE */}
             <Route path="/chooseCourseSubject" element={<ChooseSubject/>} />
