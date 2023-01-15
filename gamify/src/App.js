@@ -30,6 +30,7 @@ import ClassicQuiz from "./quiz/ClassicQuiz";
 import ClassicQuizPage2 from "./quiz/ClassicQuizPage2";
 import ClassicQuizPage3 from "./quiz/ClassicQuizPage3";
 import DragAndDrop from "./dragAndDrop/DragAndDrop";
+import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
 
 
 function App() {
@@ -69,6 +70,9 @@ function App() {
 
             {/* Drag & Drop quizz */}
             <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
+
+            {/* Unite the columns quiz */}
+            <Route path="/uniteTheColumnsQuiz" element={<UniteTheColumns/>} />
 
         </Routes>
       </Router>
