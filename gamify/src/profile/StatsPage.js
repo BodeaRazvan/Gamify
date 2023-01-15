@@ -49,18 +49,12 @@ function StatsPage() {
                 fontSize: "20px",
             }} className="mySideBar">
                 <Menu iconShape="square">
-                    <MenuItem onClick={() => {}}>Menu</MenuItem>
+                    <MenuItem onClick={() => {navigate("/profile")}}>My Profile</MenuItem>
                     <SubMenu title="My Avatar">
                         <MenuItem onClick={() => navigate("/avatar")}> Create/Edit</MenuItem>
                     </SubMenu>
-                    <SubMenu title="Trophies">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy1 </MenuItem>
-                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy2 </MenuItem>
-                    </SubMenu>
-                    <SubMenu title="Stats">
-                        <MenuItem onClick={() => navigate("/stats")}> View Stats</MenuItem>
-                    </SubMenu>
                     <SubMenu title="Streak">
+                        <MenuItem onClick={() => {}}> 12 days</MenuItem>
                     </SubMenu>
                 </Menu>
             </ProSidebar>
