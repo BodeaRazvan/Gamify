@@ -336,6 +336,27 @@
   color: #61dafb;
 }
 
+
+
+.A:hover{
+  transform: scale(1.01);
+}
+.B:hover{
+  transform: scale(1.01);
+}
+.C:hover{
+  transform: scale(1.01);
+}
+.D:hover{
+  transform: scale(1.01);
+}
+.E:hover{
+  transform: scale(1.01);
+}
+.F:hover{
+  transform: scale(1.01);
+}
+
 .myButton{
   transition: all .5s ease;
   position: relative;

@@ -26,6 +26,7 @@ import CoursePage2 from "./course/CoursePage2";
 import CoursePage3 from "./course/CoursePage3";
 import StatsPage from "./profile/StatsPage";
 import DragAndDrop from "./dragAndDrop/DragAndDrop";
+import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
 
 
 function App() {
@@ -56,8 +57,11 @@ function App() {
             <Route path="/coursePage2" element={<CoursePage2/>} />
             <Route path="/coursePage3" element={<CoursePage3/>} />
 
-            {/* Drag & Drop quizz */}
+            {/* Drag & Drop quiz */}
             <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
+
+            {/* Unite the columns quiz */}
+            <Route path="/uniteTheColumnsQuiz" element={<UniteTheColumns/>} />
 
         </Routes>
       </Router>
