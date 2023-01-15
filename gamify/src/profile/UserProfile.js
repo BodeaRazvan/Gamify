@@ -8,9 +8,7 @@ import React, {useEffect} from "react";
 import GenerateAvatar from "../avatar/GenerateAvatar";
 
 
-function MainPage() {
-
-
+function UserProfile() {
     let navigate = useNavigate();
     const goToLogin = () => {
         navigate('/login');
@@ -23,6 +21,7 @@ function MainPage() {
         navigate('/');
     }
 
+
     return(
         <div>
             <Navbar sticky="top" className="navbar" style={{fontFamily: "poppins"}}>
@@ -30,16 +29,18 @@ function MainPage() {
                     <p className="navBarTitle" style={{display: "inline", color: "white"}}>Gamify</p>
                     <p className="navBarStreak" style={{display: "inline", color: "white"}}>Streak:
                         <p style={{display: "inline", color: "yellow"}}>
-                        12 days
-                    </p></p>
+                            12 days
+                        </p></p>
                     <p className="navBarNotification" style={{display: "inline", color: "white"}}>Notifications:
-                    <p style={{display: "inline", color: "red"}}>
-                         3
-                    </p>
+                        <p style={{display: "inline", color: "red"}}>
+                            3
+                        </p>
                     </p>
                     <button className="navbarButton" onClick={logOut}> Log out</button>
                 </div>
             </Navbar>
+
+
             <ProSidebar style={{
                 marginTop: 48,
                 position: "fixed",
@@ -51,26 +52,29 @@ function MainPage() {
             }} className="mySideBar">
                 <Menu iconShape="square">
                     <MenuItem onClick={() => {}}>Menu</MenuItem>
-                    <SubMenu title="Profile" onClick={() => navigate("/profile")}>
+                    <SubMenu title="My Avatar">
+                        <MenuItem onClick={() => navigate("/avatar")}> Create/Edit</MenuItem>
                     </SubMenu>
-                    <SubMenu title="Games">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Classic quiz</MenuItem>
-                        <MenuItem onClick={() => {}}> Drag & Drop</MenuItem>
+                    <SubMenu title="Trophies">
+                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy1 </MenuItem>
+                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy2 </MenuItem>
                     </SubMenu>
-                    <SubMenu title="Courses">
-                        <MenuItem onClick={() => navigate("/admin/devices")}> English</MenuItem>
-                        <MenuItem onClick={() => {}}> IT</MenuItem>
+                    <SubMenu title="Stats">
+                    </SubMenu>
+                    <SubMenu title="Streak">
                     </SubMenu>
                 </Menu>
             </ProSidebar>
+
+
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                   <GenerateAvatar/>
-                    Main Page
+                    <GenerateAvatar/>
+                    Profile page
                 </header>
             </div>
         </div>
     );
 }
 
-export default MainPage;
+export default UserProfile;

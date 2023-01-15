@@ -23,7 +23,7 @@ function RegisterPage(){
         <div>
             <Navbar sticky="top" className="navbar" style={{fontFamily:"poppins"}}>
                 <div>
-                    <p className="navBarTitle" style={{display:"inline"}}>Unicard</p>
+                    <p className="navBarTitle" style={{display:"inline"}}>Gamify</p>
                     <button className="navbarButton" onClick={goToLogin}> Login</button>
                 </div>
             </Navbar>

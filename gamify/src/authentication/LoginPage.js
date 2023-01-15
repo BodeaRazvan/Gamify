@@ -25,7 +25,7 @@ function LoginPage(){
         <div>
             <Navbar sticky="top" className="navbar" style={{fontFamily:"poppins"}}>
                 <div>
-                    <p className="navBarTitle" style={{display:"inline"}}>Unicard</p>
+                    <p className="navBarTitle" style={{display:"inline"}}>Gamify</p>
                     <button className="navbarButton" onClick={goToRegister}> Register</button>
                 </div>
             </Navbar>
