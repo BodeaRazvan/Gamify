@@ -110,7 +110,7 @@ function UserProfile() {
                         </MenuItem>
 
                     </SubMenu>
-                    <SubMenu title="Stats" onClick={() => {}}>
+                    <SubMenu title="Stats" onClick={() => {navigate("/stats")}}>
                     </SubMenu>
                     <SubMenu title="Streak">
                         <MenuItem onClick={() => {}}> 12 days </MenuItem>
