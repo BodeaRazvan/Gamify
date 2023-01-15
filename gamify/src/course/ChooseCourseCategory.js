@@ -15,7 +15,17 @@ export default function ChooseCourseCategory() {
 
     const goToNextPage = () => {
         if (physicsIsClicked || biologyIsClicked || chemistryIsClicked || csIsClicked) {
-            navigate('/coursePage1');
+            if(localStorage.getItem("gameOption") === "4"){
+                navigate('/dragAndDropQuiz');
+            }else if (localStorage.getItem("gameOption") === "1"){
+                navigate('/classicQuiz');
+            }else if (localStorage.getItem("gameOption") === "2"){
+                navigate('/approximateQuiz');
+            }else if (localStorage.getItem("gameOption") === "3"){
+                navigate('/uniteTheColumnsQuiz');
+            }else {
+                navigate('/coursePage1');
+            }
         } else {
             setErrorActivated(true);
         }
