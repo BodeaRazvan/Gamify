@@ -1,0 +1,26 @@
+.rectangular {
+    height: 100px;
+    padding: 12px 20px;
+    margin: 30px 30px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    background-color: #A31ACB;
+}
+
+.rectangularRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rectangularRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+}
+.rectangularsContainer {
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+}

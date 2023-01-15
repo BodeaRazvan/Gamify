@@ -84,6 +84,7 @@ function AvatarPage() {
                         <MenuItem onClick={() => navigate("/admin/users")}> Trophy2 </MenuItem>
                     </SubMenu>
                     <SubMenu title="Stats">
+                        <MenuItem onClick={() => navigate("/stats")}> View Stats</MenuItem>
                     </SubMenu>
                     <SubMenu title="Streak">
                     </SubMenu>

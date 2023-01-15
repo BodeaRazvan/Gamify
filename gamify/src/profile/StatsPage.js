@@ -4,11 +4,10 @@ import {Navbar} from "react-bootstrap";
 import {ProSidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
-import React, {useEffect} from "react";
-import GenerateAvatar from "../avatar/GenerateAvatar";
+import React, {useState} from "react";
+import './StatsPage.css';
+function StatsPage() {
 
-
-function UserProfile() {
     let navigate = useNavigate();
     const goToLogin = () => {
         navigate('/login');
@@ -20,7 +19,6 @@ function UserProfile() {
     const logOut = () => {
         navigate('/');
     }
-
 
     return(
         <div>
@@ -67,15 +65,35 @@ function UserProfile() {
                 </Menu>
             </ProSidebar>
 
-
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                    <GenerateAvatar/>
-                    Profile page
+                    <div className="rectangularsContainer">
+                        <h1 style={{color: "white"}}> Your stats </h1>
+                        <div className="rectangularRow">
+                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>
+                                Quizzes taken: 24 <br/>
+                                Most played category:  Science
+                            </div>
+                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Contests Won: 5</div>
+                        </div>
+                        <div className="rectangularRow">
+                            <div className="rectangular" style={{backgroundColor: "#ff9100"}}>
+                                Courses Taken: 12 <br/>
+                                Courses in progress: 2
+                            </div>
+                            <div className="rectangular" style={{backgroundColor: "#ff9100"}}>Number of friends: 17</div>
+                        </div>
+                        <div className="rectangularRow">
+                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Number of button clicks: 567</div>
+                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Your average quiz score is in our top 5% </div>
+                        </div>
+
+                        <h1 style={{color: "white"}}> Keep up the good work! </h1>
+                    </div>
                 </header>
             </div>
         </div>
     );
 }
 
-export default UserProfile;
+export default StatsPage;
