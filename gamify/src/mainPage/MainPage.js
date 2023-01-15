@@ -57,9 +57,7 @@ function MainPage() {
                         <MenuItem onClick={() => navigate("/admin/users")}> Classic quiz</MenuItem>
                         <MenuItem onClick={() => {}}> Drag & Drop</MenuItem>
                     </SubMenu>
-                    <SubMenu title="Courses">
-                        <MenuItem onClick={() => navigate("/admin/devices")}> English</MenuItem>
-                        <MenuItem onClick={() => {}}> IT</MenuItem>
+                    <SubMenu title="Courses" onClick={() => navigate("/chooseCourseSubject")}>
                     </SubMenu>
                 </Menu>
             </ProSidebar>

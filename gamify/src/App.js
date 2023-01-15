@@ -19,6 +19,11 @@ import ContestGettingReady from "./contest/ContestGettingReady";
 
 import UserProfile from "./profile/UserProfile";
 import AvatarPage from "./profile/AvatarPage";
+import ChooseSubject from "./course/ChooseSubject";
+import ChooseCourseCategory from "./course/ChooseCourseCategory";
+import CoursePage1 from "./course/CoursePage1";
+import CoursePage2 from "./course/CoursePage2";
+import CoursePage3 from "./course/CoursePage3";
 
 
 function App() {
@@ -40,6 +45,14 @@ function App() {
             {/* PROFILE */}
             <Route path="/profile" element={<UserProfile/>} />
             <Route path="/avatar" element={<AvatarPage/>} />
+
+
+            {/* COURSE */}
+            <Route path="/chooseCourseSubject" element={<ChooseSubject/>} />
+            <Route path="/chooseCourseCategory" element={<ChooseCourseCategory/>} />
+            <Route path="/coursePage1" element={<CoursePage1/>} />
+            <Route path="/coursePage2" element={<CoursePage2/>} />
+            <Route path="/coursePage3" element={<CoursePage3/>} />
 
         </Routes>
       </Router>
