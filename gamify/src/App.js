@@ -25,6 +25,7 @@ import CoursePage1 from "./course/CoursePage1";
 import CoursePage2 from "./course/CoursePage2";
 import CoursePage3 from "./course/CoursePage3";
 import StatsPage from "./profile/StatsPage";
+import DragAndDrop from "./dragAndDrop/DragAndDrop";
 
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
             <Route path="/coursePage1" element={<CoursePage1/>} />
             <Route path="/coursePage2" element={<CoursePage2/>} />
             <Route path="/coursePage3" element={<CoursePage3/>} />
+
+            {/* Drag & Drop quizz */}
+            <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
 
         </Routes>
       </Router>
