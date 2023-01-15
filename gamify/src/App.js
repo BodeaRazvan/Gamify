@@ -68,6 +68,13 @@ function App() {
             <Route path="/classicQuizPage3" element={<ClassicQuizPage3/>} />
 
 
+            {/* QUIZ */}
+            <Route path="/classicQuiz" element={<ClassicQuiz/>} />
+            <Route path="/classicQuizPage1" element={<ClassicQuizPage1/>} />
+            <Route path="/classicQuizPage2" element={<ClassicQuizPage2/>} />
+            <Route path="/classicQuizPage3" element={<ClassicQuizPage3/>} />
+
+
             {/* Drag & Drop quizz */}
             <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
 
