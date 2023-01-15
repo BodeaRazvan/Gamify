@@ -248,6 +248,20 @@
   left:20px;
 }
 
+
+.profileAvatar{
+  position: absolute;
+  left: 87%;
+  top: 5%;
+}
+
+.profileAvatar:hover{
+  position: absolute;
+  transform: scale(1.05);
+  left: 87%;
+  top: 5%;
+}
+
 .navBarStreak{
   font-weight: bold;
   font-style: italic;

@@ -7,8 +7,23 @@ import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import GenerateAvatar from "../avatar/GenerateAvatar";
 
+import Draggable from "react-draggable";
+
 
 function UserProfile() {
+    const trophy1 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262082888994856/T1.png"
+    const trophy2 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084868706394/T2.png"
+    const trophy3 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084663197696/T3.png"
+    const trophy4 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084411543562/T4.png"
+    const trophy5 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084143091835/T5.png"
+    const trophy6 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083874672751/T6.png"
+    const trophy7 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083622998186/T7.png"
+    const trophy8 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083333603348/T8.png"
+    const trophy9 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083115503626/T9.png"
+
+    const [isDragging, setIsDragging] = React.useState(false);
+
+
     let navigate = useNavigate();
     const goToLogin = () => {
         navigate('/login');
@@ -51,18 +66,54 @@ function UserProfile() {
                 fontSize: "20px",
             }} className="mySideBar">
                 <Menu iconShape="square">
-                    <MenuItem onClick={() => {}}>Menu</MenuItem>
+                    <MenuItem onClick={() => {navigate("/mainPage")}}>Main Page</MenuItem>
                     <SubMenu title="My Avatar">
                         <MenuItem onClick={() => navigate("/avatar")}> Create/Edit</MenuItem>
                     </SubMenu>
                     <SubMenu title="Trophies">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy1 </MenuItem>
-                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy2 </MenuItem>
+                        <MenuItem style={{maxHeight:"400px", overflow:"auto"}}>
+                                <Draggable>
+                                <img src={trophy1} alt="trophy1" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy2} alt="trophy2" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy3} alt="trophy3" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy4} alt="trophy4" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy5} alt="trophy5" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy6} alt="trophy6" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy7} alt="trophy7" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy8} alt="trophy8" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                                <br/>
+                                <Draggable>
+                                <img src={trophy9} alt="trophy9" style={{width: "50px", height: "80px"}}/>
+                                </Draggable>
+                        </MenuItem>
+
                     </SubMenu>
-                    <SubMenu title="Stats">
-                        <MenuItem onClick={() => navigate("/stats")}> View Stats</MenuItem>
+                    <SubMenu title="Stats" onClick={() => {}}>
                     </SubMenu>
                     <SubMenu title="Streak">
+                        <MenuItem onClick={() => {}}> 12 days </MenuItem>
                     </SubMenu>
                 </Menu>
             </ProSidebar>
@@ -70,7 +121,9 @@ function UserProfile() {
 
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                    <GenerateAvatar/>
+                    <div style={{position:"absolute", top:"10%", right:"53%"}}>
+                      <GenerateAvatar/>
+                    </div>
                     Profile page
                 </header>
             </div>

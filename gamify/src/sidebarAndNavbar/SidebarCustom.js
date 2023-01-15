@@ -21,7 +21,7 @@ export default function SidebarCustom() {
                 fontSize: "20px",
             }} className="mySideBar">
                 <Menu iconShape="square">
-                    <MenuItem onClick={() => {}}>Menu</MenuItem>
+                    <MenuItem onClick={() => {navigate("/mainPage")}}>Main Page</MenuItem>
                     <SubMenu title="Profile" onClick={() => navigate("/profile")}>
                     </SubMenu>
                     <SubMenu title="Games">
