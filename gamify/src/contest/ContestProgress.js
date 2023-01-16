@@ -1,6 +1,7 @@
 import '../App.css';
 import '../index.css';
 import '../connections/Connections.css'
+import Popup from './Popup';
 import 'react-pro-sidebar/dist/css/styles.css';
 import * as QandA from './ContestQuestionsAndAnswers';
 import {useNavigate} from "react-router";
@@ -15,11 +16,10 @@ export default function ContestProgress() {
 
     const [subject] = useState(JSON.parse(localStorage.getItem("subjectForContest")));
 
-    const [time, setTime] = useState(20);
+    const [time, setTime] = useState(10);
     const [errorActivated, setErrorActivated] = useState(false);
     const [answerConfirmed, setAnswerConfirmed] = useState(false);
 
-    const [questions, setQuestions] = useState([QandA.scienceQ1, QandA.scienceQ2, QandA.scienceQ3]);
     const [currentQuestion, setCurrentQuestion] = useState("");
     const [answerA, setAnswerA] = useState({});
     const [answerB, setAnswerB] = useState({});
@@ -29,11 +29,13 @@ export default function ContestProgress() {
     const [firstQuestion] = useState(true);
     const [secondQuestion, setSecondQuestion] = useState(false);
     const [thirdQuestion, setThirdQuestion] = useState(false);
-
     const [done, setDone] = useState(false);
     const [doneForMessage, setDoneForMessage] = useState(false);
 
     const [noOfCorrectAnswers, setNoOfCorrectAnswers] = useState(0);
+    localStorage.setItem("noOfCorrectAnswers", JSON.stringify(noOfCorrectAnswers))
+
+    const [popupTriggered, setPopupTriggered] = useState(false);
 
     let navigate = useNavigate();
 
@@ -42,7 +44,7 @@ export default function ContestProgress() {
             setTime(time - 1)
         },1000);
         if(time - 1 === -5){
-           setTime(20);
+           setTime(10);
            if(firstQuestion) {
                setSecondQuestion(true);
            }
@@ -73,7 +75,11 @@ export default function ContestProgress() {
     }
 
     const exit = () => {
-        navigate('/contestExit');
+        navigate('/mainPage');
+    }
+
+    const triggerExitPopup = () => {
+        setPopupTriggered(true);
     }
 
     const handleSelection = (event) => {
@@ -115,6 +121,7 @@ export default function ContestProgress() {
     }
 
     useEffect(() => {
+        setAnswerConfirmed(false);
         if (subject === "Science"){
             if (firstQuestion){
                 setCurrentQuestion(QandA.scienceQ1);
@@ -122,7 +129,6 @@ export default function ContestProgress() {
                 setAnswerB({answer: QandA.scienceQ1A1, selected: false, correct: false})
                 setAnswerC({answer: QandA.scienceQ1A2, selected: false, correct: false})
                 setAnswerD({answer: QandA.scienceQ1A3, selected: false, correct: false})
-                setAnswerConfirmed(false)
             }
             if (secondQuestion){
                 setCurrentQuestion(QandA.scienceQ2);
@@ -130,7 +136,6 @@ export default function ContestProgress() {
                 setAnswerB({answer: QandA.scienceQ2A2, selected: false, correct: false})
                 setAnswerC({answer: QandA.scienceQ2CorrectAnswer, selected: false, correct: true})
                 setAnswerD({answer: QandA.scienceQ2A3, selected: false, correct: false})
-                setAnswerConfirmed(false)
             }
             if (thirdQuestion) {
                 setCurrentQuestion(QandA.scienceQ3);
@@ -138,11 +143,32 @@ export default function ContestProgress() {
                 setAnswerB({answer: QandA.scienceQ3A2, selected: false, correct: false})
                 setAnswerC({answer: QandA.scienceQ3A3, selected: false, correct: false})
                 setAnswerD({answer: QandA.scienceQ2CorrectAnswer, selected: false, correct: true})
-                setAnswerConfirmed(false)
             }
-            if(done){
-                goToRankingPage()
+        } else if (subject === "Mathematics"){
+            if (firstQuestion){
+                setCurrentQuestion(QandA.mathQ1);
+                setAnswerA({answer: QandA.mathQ1CorrectAnswer, selected: false, correct: true})
+                setAnswerB({answer: QandA.mathQ1A1, selected: false, correct: false})
+                setAnswerC({answer: QandA.mathQ1A2, selected: false, correct: false})
+                setAnswerD({answer: QandA.mathQ1A3, selected: false, correct: false})
             }
+            if (secondQuestion){
+                setCurrentQuestion(QandA.mathQ2);
+                setAnswerA({answer: QandA.mathQ2A1, selected: false, correct: false})
+                setAnswerB({answer: QandA.mathQ2A2, selected: false, correct: false})
+                setAnswerC({answer: QandA.mathQ2CorrectAnswer, selected: false, correct: true})
+                setAnswerD({answer: QandA.mathQ2A3, selected: false, correct: false})
+            }
+            if (thirdQuestion) {
+                setCurrentQuestion(QandA.mathQ3);
+                setAnswerA({answer: QandA.mathQ3A1, selected: false, correct: false})
+                setAnswerB({answer: QandA.mathQ3A2, selected: false, correct: false})
+                setAnswerC({answer: QandA.mathQ3A3, selected: false, correct: false})
+                setAnswerD({answer: QandA.mathQ2CorrectAnswer, selected: false, correct: true})
+            }
+        }
+        if(done){
+            goToRankingPage()
         }
     }, [firstQuestion, secondQuestion, thirdQuestion, done]);
 
@@ -208,10 +234,16 @@ export default function ContestProgress() {
                         <label style={{margin: 10, color: "red"}}> Choose one answer before pressing confirm! </label>
                         : null
                     }
-
                     <div>
-                        <button className="go-back-button" onClick={exit}> Exit </button>
+                        <button className="go-back-button" onClick={triggerExitPopup}> Exit </button>
                     </div>
+                    <Popup trigger={popupTriggered} setTrigger={setPopupTriggered}>
+                        <h3>Are you sure you want to exit the contest?</h3>
+                        <div>
+                            <button className="popup-button" onClick={exit}> Yes </button>
+                            <button className="popup-button" onClick={() => setPopupTriggered(false)}> No </button>
+                        </div>
+                    </Popup>
                 </header>
             </div>
         </div>

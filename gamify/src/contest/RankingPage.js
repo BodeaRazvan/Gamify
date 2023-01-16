@@ -2,7 +2,6 @@ import '../App.css';
 import '../index.css';
 import '../connections/Connections.css'
 import 'react-pro-sidebar/dist/css/styles.css';
-import * as QandA from './ContestQuestionsAndAnswers';
 import {useNavigate} from "react-router";
 import React from "react";
 import {useState} from "react";
@@ -14,23 +13,40 @@ import {useEffect} from "react";
 export default function RankingPage() {
 
     const [subject] = useState(JSON.parse(localStorage.getItem("subjectForContest")));
-    const [invitedPlayers, setInvitedPlayers] = useState(JSON.parse(localStorage.getItem("invitedPlayers")));
+    const [contestMode] = useState(JSON.parse(localStorage.getItem("contestMode")));
     const [noOfPlayers, setNoOfPlayers] =  useState(JSON.parse(localStorage.getItem("numberOfPlayers")));
     const [noOfCorrectAnswers, setNoOfCorrectAnswers] =  useState(JSON.parse(localStorage.getItem("noOfCorrectAnswers")));
+    const [players, setPlayers] = useState(JSON.parse(localStorage.getItem("players")));
+    const [randomUsers, setRandomUsers] = useState(JSON.parse(localStorage.getItem("strangers")));
 
-    const [firstPlace, setFirstPlace] = useState("");
-    const [secondPlace, setSecondPlace] = useState("");
-    const [thirdPlace, setThirdPlace] = useState("");
-    const [fourthPlace, setFourthPlace] = useState("");
-    const [fifthPlace, setFifthPlace] = useState("");
+    const [firstPlace, setFirstPlace] = useState(false);
+    const [secondPlace, setSecondPlace] = useState(false);
+    const [thirdPlace, setThirdPlace] = useState(false);
+    const [fourthPlace, setFourthPlace] = useState(false);
 
-    console.log(noOfPlayers);
+    const [rankingList, setRankingList] = useState([]);
 
     let navigate = useNavigate();
 
     const exit = () => {
         navigate('/mainPage');
     }
+
+    useEffect(() => {
+        if(noOfCorrectAnswers === 3){
+            setFirstPlace(true);
+        }else if(noOfCorrectAnswers === 2){
+            setSecondPlace(true);
+        } else if(noOfCorrectAnswers === 1){
+            setThirdPlace(true);
+        } else if(noOfCorrectAnswers === 0){
+            if(noOfPlayers === 2){
+                setThirdPlace(true);
+            }else{
+                setFourthPlace(true);
+            }
+        }
+    }, [])
 
     return(
         <div>
@@ -39,14 +55,20 @@ export default function RankingPage() {
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h1> Congratulations! </h1>
-                    <label style={{fontSize: 35}}> <b>First place: {firstPlace}</b> </label>
-                    <label style={{fontSize: 35}}> <b>Second place: {secondPlace}</b> </label>
-                    <label style={{fontSize: 35}}> <b>Third place: {thirdPlace}</b> </label>
-                    <label style={{fontSize: 30, marginTop: 10}}> Fourth place: {fourthPlace}</label>
-                    <label style={{fontSize: 30}}> Fifth place: {fifthPlace}</label>
-                    <div>
-                        <button className="go-back-button" onClick={exit}> Exit </button>
-                    </div>
+                    {firstPlace
+                        ?
+                        <label style={{fontSize: 35}}> <b> You are the 1st place </b> </label>
+                        : ( secondPlace
+                            ?
+                            <label style={{fontSize: 35}}> <b> You are the 2nd place </b> </label>
+                            : ( thirdPlace
+                                ?
+                                <label style={{fontSize: 35}}> <b> You are the  3rd place </b> </label>
+                                : ( fourthPlace
+                                    ?
+                                    <label style={{fontSize: 35}}> <b> You are the  4th place </b> </label>
+                                    : null)))}
+                    <button className="go-back-button" onClick={exit}> Exit </button>
                 </header>
             </div>
         </div>

@@ -16,10 +16,11 @@ export default function WaitingForPeople() {
     const [contestMode] = useState(JSON.parse(localStorage.getItem("contestMode")));
     const [errorActivated, setErrorActivated] = useState(false);
     const [noOfContestants, setNoOfContestants] = useState(0);
+    const [invitedPlayers, setInvitedPlayers] = useState(JSON.parse(localStorage.getItem("invitedPlayers")))
 
     const initializeNoOfInvitedPeople = () => {
         if(contestMode === "Invite friends"){
-            return JSON.parse(localStorage.getItem("invitedPlayers")).length;
+            return invitedPlayers.length;
         }else if (contestMode === "Global"){
             return 9;
         }
@@ -40,6 +41,15 @@ export default function WaitingForPeople() {
     useEffect(() => {
         const interval = setInterval(() => {
             setNoOfContestants(noOfContestants + 1)
+
+            const updatedInvitedPlayers = invitedPlayers.slice(0,noOfContestants + 1).map(player => {
+                if(!player.joined){
+                    return {...player, joined: true};
+                }
+                return player;
+            })
+            localStorage.setItem("players", JSON.stringify(updatedInvitedPlayers));
+
             localStorage.setItem("numberOfPlayers", JSON.stringify(noOfContestants + 1));
             if(noOfContestants > noOfInvitedPeople - 1){
                 navigate('/contestGettingReady');
