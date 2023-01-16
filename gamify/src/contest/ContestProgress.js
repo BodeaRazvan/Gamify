@@ -63,6 +63,7 @@ export default function ContestProgress() {
 
     const confirm = () => {
         if(answerA.selected || answerB.selected || answerC.selected || answerD.selected){
+            checkAnswer();
             setAnswerConfirmed(true);
             setErrorActivated(false);
         }else{
@@ -108,6 +109,8 @@ export default function ContestProgress() {
         }
     }
 
+    const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
+
     const checkAnswer = () => {
         if((answerA.correct && answerA.selected) ||
             (answerB.correct && answerB.selected) ||
@@ -115,9 +118,10 @@ export default function ContestProgress() {
             (answerD.correct && answerD.selected)){
                 setNoOfCorrectAnswers(noOfCorrectAnswers + 1);
                 localStorage.setItem("noOfCorrectAnswers", JSON.stringify(noOfCorrectAnswers + 1))
-                return true;
+                setIsAnswerCorrect(true);
+        }else{
+       setIsAnswerCorrect(false);
         }
-        return false;
     }
 
     useEffect(() => {
@@ -190,7 +194,7 @@ export default function ContestProgress() {
                         :
                         <div className="one-below-another">
                             <label style={{margin: 20, fontSize: 30}}>
-                                {checkAnswer() && answerConfirmed
+                                {(isAnswerCorrect && answerConfirmed)
                                     ? <label style={{color: 'green'}}> Congratulations! You answered correctly</label>
                                     : ( answerConfirmed
                                         ? <label style={{color: 'red'}}> Oh no... your answer is wrong</label>
