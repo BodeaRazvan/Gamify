@@ -1,8 +1,6 @@
 import '../App.css';
 import '../index.css';
 import './Contest.css';
-import {Navbar} from "react-bootstrap";
-import {ProSidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
@@ -19,6 +17,16 @@ export default function WaitingForPeople() {
     const [errorActivated, setErrorActivated] = useState(false);
     const [noOfContestants, setNoOfContestants] = useState(0);
 
+    const initializeNoOfInvitedPeople = () => {
+        if(contestMode === "Invite friends"){
+            return JSON.parse(localStorage.getItem("invitedPlayers")).length;
+        }else if (contestMode === "Global"){
+            return 9;
+        }
+    }
+
+    const [noOfInvitedPeople] = useState(initializeNoOfInvitedPeople());
+
     let navigate = useNavigate();
 
     const startGame = () => {
@@ -33,7 +41,7 @@ export default function WaitingForPeople() {
         const interval = setInterval(() => {
             setNoOfContestants(noOfContestants + 1)
             localStorage.setItem("numberOfPlayers", JSON.stringify(noOfContestants + 1));
-            if(noOfContestants > 8){
+            if(noOfContestants > noOfInvitedPeople - 1){
                 navigate('/contestGettingReady');
             }
         },2000);
@@ -54,18 +62,18 @@ export default function WaitingForPeople() {
             <SidebarCustom/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                    <h1> {subject} </h1>
+                    <h2> {subject} </h2>
                     <label>
                         <label style={{margin: 10}}>Waiting for others to join</label>
                         <Dot>.</Dot><Dot>.</Dot><Dot>.</Dot>
                     </label>
-                    <label style={{margin: 10}}> {noOfContestants + 1}/10 </label>
+                    <label style={{margin: 10}}> {noOfContestants + 1}/{noOfInvitedPeople + 1} </label>
                     <button className="start-earlier-button" onClick={startGame}>
                         Start earlier if you don't want to wait anymore
                     </button>
                     {errorActivated ?
                         <label style={{margin: 10, color: "red"}}>
-                            You have to wait for at least one contestant to join!
+                            You have to wait for at least 2 contestants to join!
                         </label>
                         : null
                     }

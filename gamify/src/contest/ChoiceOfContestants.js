@@ -48,7 +48,7 @@ export default function ChoiceOfContestants() {
            <SidebarCustom/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                    <h1> {subject} </h1>
+                    <h2> {subject} </h2>
                     <button className={globalIsClicked ? "subject-button-clicked" : "subject-button"} value={"Global"} onClick={handleSelection}> Global </button>
                     <label style={{margin: 10}}> or </label>
                     <button className={inviteFriendsIsClicked ? "subject-button-clicked" : "subject-button"} value={"Invite friends"} onClick={handleSelection}> Invite friends </button>
