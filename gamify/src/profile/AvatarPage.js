@@ -78,15 +78,7 @@ function AvatarPage() {
                 fontSize: "20px",
             }} className="mySideBar">
                 <Menu iconShape="square">
-                    <MenuItem onClick={() => {}}>Menu</MenuItem>
-                    <SubMenu title="Trophies">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy1 </MenuItem>
-                        <MenuItem onClick={() => navigate("/admin/users")}> Trophy2 </MenuItem>
-                    </SubMenu>
-                    <SubMenu title="Stats">
-                    </SubMenu>
-                    <SubMenu title="Streak">
-                    </SubMenu>
+                    <MenuItem onClick={() => {navigate("/profile")}}>My Profile</MenuItem>
                 </Menu>
             </ProSidebar>
 

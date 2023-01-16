@@ -37,7 +37,7 @@ function GenerateAvatar() {
     },[]);
 
     return(
-        <div onClick={() => navigate("/profile")} style={{position:"absolute", left:"87%",top:"5%"}}>
+        <div onClick={() => navigate("/profile")} className="profileAvatar">
             <p>
                 {
                     faceImage === 0 ? <img src={face0} alt="face0" style={{width:"200px", height:"200px"}}/>:

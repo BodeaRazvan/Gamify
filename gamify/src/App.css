@@ -67,6 +67,15 @@
   color: black;
 }
 
+.dragAndDropDiv {
+  background: linear-gradient(0deg, #154944  0%, rgb(169,184,195) 100%);
+  min-height: 100vh;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+
 .myHeader5 {
   background: linear-gradient(0deg, #154944  0%, rgb(169,184,195) 100%);
   min-height: 100vh;
@@ -248,6 +257,20 @@
   left:20px;
 }
 
+
+.profileAvatar{
+  position: absolute;
+  left: 87%;
+  top: 5%;
+}
+
+.profileAvatar:hover{
+  position: absolute;
+  transform: scale(1.05);
+  left: 87%;
+  top: 5%;
+}
+
 .navBarStreak{
   font-weight: bold;
   font-style: italic;
@@ -311,6 +334,27 @@
 
 .App-link {
   color: #61dafb;
+}
+
+
+
+.A:hover{
+  transform: scale(1.01);
+}
+.B:hover{
+  transform: scale(1.01);
+}
+.C:hover{
+  transform: scale(1.01);
+}
+.D:hover{
+  transform: scale(1.01);
+}
+.E:hover{
+  transform: scale(1.01);
+}
+.F:hover{
+  transform: scale(1.01);
 }
 
 .myButton{

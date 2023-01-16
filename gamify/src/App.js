@@ -24,10 +24,22 @@ import ChooseCourseCategory from "./course/ChooseCourseCategory";
 import CoursePage1 from "./course/CoursePage1";
 import CoursePage2 from "./course/CoursePage2";
 import CoursePage3 from "./course/CoursePage3";
+
 import Connections from "./connections/Connections";
 import ContestProgress from "./contest/ContestProgress";
 import RankingPage from "./contest/RankingPage";
 import StreakPage from "./profile/StreakPage";
+
+import StatsPage from "./profile/StatsPage";
+import ClassicQuizPage1 from "./quiz/ClassicQuizPage1";
+import ClassicQuiz from "./quiz/ClassicQuiz";
+import ClassicQuizPage2 from "./quiz/ClassicQuizPage2";
+import ClassicQuizPage3 from "./quiz/ClassicQuizPage3";
+import DragAndDrop from "./dragAndDrop/DragAndDrop";
+import GoodJobPage from "./quiz/GoodJobPage";
+
+import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
+
 
 
 function App() {
@@ -54,7 +66,11 @@ function App() {
             {/* PROFILE */}
             <Route path="/profile" element={<UserProfile/>} />
             <Route path="/avatar" element={<AvatarPage/>} />
+
             <Route path="/streak" element={<StreakPage/>} />
+
+            <Route path="/stats" element={<StatsPage/>} />
+
 
             {/* COURSE */}
             <Route path="/chooseCourseSubject" element={<ChooseSubject/>} />
@@ -62,6 +78,21 @@ function App() {
             <Route path="/coursePage1" element={<CoursePage1/>} />
             <Route path="/coursePage2" element={<CoursePage2/>} />
             <Route path="/coursePage3" element={<CoursePage3/>} />
+
+            {/* QUIZ */}
+            <Route path="/classicQuiz" element={<ClassicQuiz/>} />
+            <Route path="/classicQuizPage1" element={<ClassicQuizPage1/>} />
+            <Route path="/classicQuizPage2" element={<ClassicQuizPage2/>} />
+            <Route path="/classicQuizPage3" element={<ClassicQuizPage3/>} />
+            <Route path="/goodJob" element={<GoodJobPage/>} />
+
+
+
+            {/* Drag & Drop quizz */}
+            <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
+
+            {/* Unite the columns quiz */}
+            <Route path="/uniteTheColumnsQuiz" element={<UniteTheColumns/>} />
 
         </Routes>
       </Router>

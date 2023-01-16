@@ -21,11 +21,11 @@ export default function SidebarCustom() {
                 fontSize: "20px",
             }} className="mySideBar">
                 <Menu iconShape="square">
-                    <MenuItem onClick={() => {}}>Menu</MenuItem>
+                    <MenuItem onClick={() => {navigate("/mainPage")}}>Main Page</MenuItem>
                     <SubMenu title="Profile" onClick={() => navigate("/profile")}>
                     </SubMenu>
                     <SubMenu title="Games">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Classic quiz</MenuItem>
+                        <MenuItem onClick={() => navigate("/classicQuiz")}> Classic quiz</MenuItem>
                         <MenuItem onClick={() => {}}> Drag & Drop</MenuItem>
                     </SubMenu>
                     <SubMenu title="Courses" onClick={() => navigate("/chooseCourseSubject")}>
