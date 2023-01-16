@@ -75,6 +75,8 @@ function App() {
             {/* Drag & Drop quizz */}
             <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
 
+            {/* Unite the columns quiz */}
+            <Route path="/uniteTheColumnsQuiz" element={<UniteTheColumns/>} />
 
         </Routes>
       </Router>
