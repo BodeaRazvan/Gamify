@@ -24,6 +24,12 @@ import ChooseCourseCategory from "./course/ChooseCourseCategory";
 import CoursePage1 from "./course/CoursePage1";
 import CoursePage2 from "./course/CoursePage2";
 import CoursePage3 from "./course/CoursePage3";
+
+import Connections from "./connections/Connections";
+import ContestProgress from "./contest/ContestProgress";
+import RankingPage from "./contest/RankingPage";
+import StreakPage from "./profile/StreakPage";
+
 import StatsPage from "./profile/StatsPage";
 import ClassicQuizPage1 from "./quiz/ClassicQuizPage1";
 import ClassicQuiz from "./quiz/ClassicQuiz";
@@ -33,6 +39,7 @@ import DragAndDrop from "./dragAndDrop/DragAndDrop";
 import GoodJobPage from "./quiz/GoodJobPage";
 
 import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
+
 
 
 function App() {
@@ -50,11 +57,20 @@ function App() {
             <Route path="/waitingForPeople" element={<WaitingForPeople/>} />
             <Route path="/chooseFriends" element={<ChooseFriends/>} />
             <Route path="/contestGettingReady" element={<ContestGettingReady/>} />
+            <Route path="/contestProgress" element={<ContestProgress/>} />
+            <Route path="/rankingPage" element={<RankingPage />} />
+
+            {/* CONNECTIONS */}
+            <Route path="/connections" element={<Connections/>} />
 
             {/* PROFILE */}
             <Route path="/profile" element={<UserProfile/>} />
             <Route path="/avatar" element={<AvatarPage/>} />
+
+            <Route path="/streak" element={<StreakPage/>} />
+
             <Route path="/stats" element={<StatsPage/>} />
+
 
             {/* COURSE */}
             <Route path="/chooseCourseSubject" element={<ChooseSubject/>} />

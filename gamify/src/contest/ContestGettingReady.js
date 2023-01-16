@@ -1,8 +1,6 @@
 import '../App.css';
 import '../index.css';
-import './WaitingForPeople.css';
-import {Navbar} from "react-bootstrap";
-import {ProSidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar';
+import './Contest.css';
 import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
