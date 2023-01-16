@@ -1,18 +1,14 @@
 import '../App.css';
 import '../index.css';
 import 'react-pro-sidebar/dist/css/styles.css';
-import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 import SidebarProfile from "../sidebarAndNavbar/SidebarProfile";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
-import dayjs, {locale} from 'dayjs';
-import {formatDay} from "react-calendar/src/shared/dateFormatter";
 
 
 export default function StreakPage() {
-    let navigate = useNavigate();
 
     const mark = [
         '18-1-2023',
@@ -27,10 +23,6 @@ export default function StreakPage() {
         '9-1-2023',
         '8-1-2023',
     ]
-
-    const logOut = () => {
-        navigate('/');
-    }
 
     return(
         <div>
