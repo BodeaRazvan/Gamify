@@ -30,6 +30,8 @@ import ClassicQuiz from "./quiz/ClassicQuiz";
 import ClassicQuizPage2 from "./quiz/ClassicQuizPage2";
 import ClassicQuizPage3 from "./quiz/ClassicQuizPage3";
 import DragAndDrop from "./dragAndDrop/DragAndDrop";
+import GoodJobPage from "./quiz/GoodJobPage";
+
 import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
 
 
@@ -66,20 +68,13 @@ function App() {
             <Route path="/classicQuizPage1" element={<ClassicQuizPage1/>} />
             <Route path="/classicQuizPage2" element={<ClassicQuizPage2/>} />
             <Route path="/classicQuizPage3" element={<ClassicQuizPage3/>} />
+            <Route path="/goodJob" element={<GoodJobPage/>} />
 
-
-            {/* QUIZ */}
-            <Route path="/classicQuiz" element={<ClassicQuiz/>} />
-            <Route path="/classicQuizPage1" element={<ClassicQuizPage1/>} />
-            <Route path="/classicQuizPage2" element={<ClassicQuizPage2/>} />
-            <Route path="/classicQuizPage3" element={<ClassicQuizPage3/>} />
 
 
             {/* Drag & Drop quizz */}
             <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
 
-            {/* Unite the columns quiz */}
-            <Route path="/uniteTheColumnsQuiz" element={<UniteTheColumns/>} />
 
         </Routes>
       </Router>

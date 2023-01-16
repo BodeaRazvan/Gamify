@@ -16,7 +16,7 @@ function ClassicQuizPage3() {
 
     let navigate = useNavigate();
     const goToNextPage = () => {
-        navigate('/classicQuiz');
+        navigate('/goodJob');
     }
 
     const goBack = () => {
