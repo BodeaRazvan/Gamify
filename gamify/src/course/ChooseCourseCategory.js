@@ -23,7 +23,9 @@ export default function ChooseCourseCategory() {
                 navigate('/approximateQuiz');
             }else if (localStorage.getItem("gameOption") === "3"){
                 navigate('/uniteTheColumnsQuiz');
-            }else {
+            }else if (localStorage.getItem("gameOption") === "5")
+                navigate('/coursePage1');
+            else {
                 navigate('/coursePage1');
             }
         } else {
