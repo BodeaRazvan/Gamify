@@ -27,6 +27,7 @@ import CoursePage3 from "./course/CoursePage3";
 import Connections from "./connections/Connections";
 import ContestProgress from "./contest/ContestProgress";
 import RankingPage from "./contest/RankingPage";
+import StreakPage from "./profile/StreakPage";
 
 
 function App() {
@@ -53,7 +54,7 @@ function App() {
             {/* PROFILE */}
             <Route path="/profile" element={<UserProfile/>} />
             <Route path="/avatar" element={<AvatarPage/>} />
-
+            <Route path="/streak" element={<StreakPage/>} />
 
             {/* COURSE */}
             <Route path="/chooseCourseSubject" element={<ChooseSubject/>} />
