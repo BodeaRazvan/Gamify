@@ -5,21 +5,11 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 function ClassicQuiz() {
     let navigate = useNavigate();
-    const goToLogin = () => {
-        navigate('/login');
-    }
-    const goToRegister = () => {
-        navigate('/register');
-    }
-
-    const logOut = () => {
-        navigate('/');
-    }
 
     const goToNextPage = () => {
         navigate('/classicQuizPage1');
@@ -29,7 +19,7 @@ function ClassicQuiz() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily: "poppins"}}>
 
                 <header className="myHeader">

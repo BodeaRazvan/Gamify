@@ -7,6 +7,8 @@ import {useNavigate} from "react-router";
 import React, {useEffect, useState} from "react";
 import GenerateAvatar from "../avatar/GenerateAvatar";
 import Draggable from "react-draggable";
+import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 function DragAndDrop() {
@@ -93,22 +95,7 @@ function DragAndDrop() {
 
     return(
         <div>
-            <Navbar sticky="top" className="navbar" style={{fontFamily: "poppins"}}>
-                <div>
-                    <p className="navBarTitle" style={{display: "inline", color: "white"}}>Gamify</p>
-                    <p className="navBarStreak" style={{display: "inline", color: "white"}}>Streak:
-                        <p style={{display: "inline", color: "yellow"}}>
-                            12 days
-                        </p></p>
-                    <p className="navBarNotification" style={{display: "inline", color: "white"}}>Notifications:
-                        <p style={{display: "inline", color: "red"}}>
-                            3
-                        </p>
-                    </p>
-                    <button className="navbarButton" onClick={logOut}> Log out</button>
-                </div>
-            </Navbar>
-
+            <NavbarCustom/>
 
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
