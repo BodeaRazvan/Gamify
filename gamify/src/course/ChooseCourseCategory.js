@@ -27,6 +27,8 @@ export default function ChooseCourseCategory() {
                 navigate('/uniteTheColumnsQuiz');
             }else if (localStorage.getItem("gameOption") === "5")
                 navigate('/coursePage1');
+            else if (localStorage.getItem("gameOption") === "6")
+                navigate('/createQuizPage');
             else {
                 navigate('/coursePage1');
             }
