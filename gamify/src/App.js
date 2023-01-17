@@ -40,6 +40,11 @@ import GoodJobPage from "./quiz/GoodJobPage";
 
 import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
 import UniteTheColumns2 from "./uniteTheColumns/UniteTheColumns2";
+import CreateQuiz from "./createQuiz/CreateQuiz";
+import CreateQuizPage from "./createQuiz/CreateQuizPage";
+import ConfirmQuiz from "./createQuiz/ConfirmQuiz";
+import StartNewQuiz from "./createQuiz/StartNewQuiz";
+import GoodJobNewQuiz from "./createQuiz/GoodJobNewQuiz";
 
 
 
@@ -88,7 +93,12 @@ function App() {
             <Route path="/classicQuizPage3" element={<ClassicQuizPage3/>} />
             <Route path="/goodJob" element={<GoodJobPage/>} />
 
-
+            {/* CREATE QUIZ */}
+            <Route path="/createQuiz" element={<CreateQuiz/>} />
+            <Route path="/createQuizPage" element={<CreateQuizPage />} />
+            <Route path="/confirmQuiz" element={<ConfirmQuiz />} />
+            <Route path="/startNewQuiz" element={<StartNewQuiz />} />
+            <Route path="/goodJobNewQuiz" element={<GoodJobNewQuiz/>} />
 
             {/* Drag & Drop quizz */}
             <Route path="/dragAndDropQuiz" element={<DragAndDrop/>} />
