@@ -15,8 +15,11 @@ function MainPage() {
             <SidebarMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                   <GenerateAvatar/>
-                    Main Page
+                    <div className="mainPage">
+                        <GenerateAvatar/>
+                        Main Page
+                    </div>
+
                 </header>
             </div>
         </div>

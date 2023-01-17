@@ -931,3 +931,25 @@
     transform: rotate(360deg);
   }
 }
+
+.mainPage{
+  text-align: center;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /*background-color: #f8f9fd;*/
+  background-image: url('./img/b.jpg');
+  /*backgroundRepeat: 'no-repeat',*/
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  width: 100%;
+}
