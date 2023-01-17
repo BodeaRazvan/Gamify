@@ -2,33 +2,20 @@ import '../App.css';
 import '../index.css';
 import './ClassicQuiz.css'
 import 'react-pro-sidebar/dist/css/styles.css';
-import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
 import GenerateAvatar from "../avatar/GenerateAvatar";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 function GoodJobPage() {
     const trophy1 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262082888994856/T1.png"
     const confetti = "https://media.giphy.com/media/VdidEvq6v8z8eNOldF/giphy.gif";
 
-    let navigate = useNavigate();
-    const goToLogin = () => {
-        navigate('/login');
-    }
-    const goToRegister = () => {
-        navigate('/register');
-    }
-
-    const logOut = () => {
-        navigate('/');
-    }
-
     return(
         <div className="background-confetti">
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
 
             <div className="App" style={{fontFamily: "poppins"}}>
                 <br />

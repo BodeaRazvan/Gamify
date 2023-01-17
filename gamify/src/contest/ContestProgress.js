@@ -10,6 +10,7 @@ import {useState} from "react";
 import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 import {useEffect} from "react";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 export default function ContestProgress() {
@@ -179,7 +180,7 @@ export default function ContestProgress() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h2> {subject} </h2>

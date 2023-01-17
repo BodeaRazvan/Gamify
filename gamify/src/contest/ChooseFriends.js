@@ -7,6 +7,7 @@ import React from "react";
 import {useState} from "react";
 import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 export default function ChooseFriends() {
@@ -52,7 +53,7 @@ export default function ChooseFriends() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h2> {subject} </h2>

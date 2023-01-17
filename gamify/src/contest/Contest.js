@@ -4,8 +4,8 @@ import './Contest.css';
 import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React, {useState} from "react";
-import SidebarCustom from '../sidebarAndNavbar/SidebarCustom';
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 export default function Contest() {
@@ -69,7 +69,7 @@ export default function Contest() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h1> Choose a subject </h1>

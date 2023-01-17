@@ -5,7 +5,7 @@ import {useNavigate} from "react-router";
 import React from "react";
 import {useState} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 export default function ChoiceOfContestants() {
@@ -45,7 +45,7 @@ export default function ChoiceOfContestants() {
     return(
         <div>
            <NavbarCustom/>
-           <SidebarCustom/>
+           <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h2> {subject} </h2>

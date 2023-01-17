@@ -7,6 +7,7 @@ import React, {useEffect} from "react";
 import {useState} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 export default function ContestGettingReady() {
 
@@ -29,7 +30,7 @@ export default function ContestGettingReady() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <div className="one-below-another">

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router";
-import {Navbar} from "react-bootstrap";
-import {Menu, MenuItem, ProSidebar, SubMenu} from "react-pro-sidebar";
 import './CoursePage.css';
+import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 export default function CoursePage2() {
 
@@ -16,47 +16,10 @@ export default function CoursePage2() {
         navigate('/coursePage2');
     }
 
-    const logOut = () => {
-        navigate('/');
-    }
     return (
         <div>
-            <Navbar sticky="top" className="navbar" style={{fontFamily: "poppins"}}>
-                <div>
-                    <p className="navBarTitle" style={{display: "inline", color: "white"}}>Gamify</p>
-                    <p className="navBarStreak" style={{display: "inline", color: "white"}}>Streak:
-                        <p style={{display: "inline", color: "yellow"}}>
-                            12 days
-                        </p></p>
-                    <p className="navBarNotification" style={{display: "inline", color: "white"}}>Notifications:
-                        <p style={{display: "inline", color: "red"}}>
-                            3
-                        </p>
-                    </p>
-                    <button className="navbarButton" onClick={logOut}> Log out</button>
-                </div>
-            </Navbar>
-            <ProSidebar style={{
-                marginTop: 48,
-                position: "fixed",
-                fontFamily: "poppins",
-                sticky: "top",
-                width: "150px",
-                minWidth: "150px",
-                fontSize: "20px",
-            }} className="mySideBar">
-                <Menu iconShape="square">
-                    <MenuItem onClick={() => {
-                    }}>Menu</MenuItem>
-                    <SubMenu title="Games">
-                        <MenuItem onClick={() => navigate("/admin/users")}> Classic quiz</MenuItem>
-                        <MenuItem onClick={() => {
-                        }}> Drag & Drop</MenuItem>
-                    </SubMenu>
-                    <SubMenu title="Courses" onClick={() => navigate("/chooseCourseSubject")}>
-                    </SubMenu>
-                </Menu>
-            </ProSidebar>
+            <NavbarCustom/>
+            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily: "poppins"}}>
                 <header className="myHeader">
                     <h1> Course on {localStorage.getItem("courseSubject")} > {localStorage.getItem("courseCategory")}</h1>

@@ -21,12 +21,14 @@ export default function SidebarCustom() {
                 fontSize: "20px",
             }} className="mySideBar">
                 <Menu iconShape="square">
-                    <MenuItem onClick={() => {navigate("/mainPage")}}>Main Page</MenuItem>
+                    <MenuItem onClick={() => {}}>Menu</MenuItem>
                     <SubMenu title="Profile" onClick={() => navigate("/profile")}>
                     </SubMenu>
                     <SubMenu title="Games">
-                        <MenuItem onClick={() => navigate("/classicQuiz")}> Classic quiz</MenuItem>
-                        <MenuItem onClick={() => {}}> Drag & Drop</MenuItem>
+                        <MenuItem onClick={() =>  {localStorage.setItem("gameOption","1");navigate("/chooseCourseSubject")}}> Classic quiz</MenuItem>
+                        <MenuItem onClick={() =>  {localStorage.setItem("gameOption","2");navigate("/chooseCourseSubject")}}> Approximate</MenuItem>
+                        <MenuItem onClick={() =>  {localStorage.setItem("gameOption","3");navigate("/chooseCourseSubject")}}> Columns</MenuItem>
+                        <MenuItem onClick={() => {localStorage.setItem("gameOption","4");navigate("/chooseCourseSubject")}}> Drag & Drop</MenuItem>
                     </SubMenu>
                     <SubMenu title="Courses" onClick={() => navigate("/chooseCourseSubject")}>
                     </SubMenu>

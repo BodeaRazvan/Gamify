@@ -8,6 +8,7 @@ import {useState} from "react";
 import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 import {useEffect} from "react";
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 export default function RankingPage() {
@@ -51,7 +52,7 @@ export default function RankingPage() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h1> Congratulations! </h1>
