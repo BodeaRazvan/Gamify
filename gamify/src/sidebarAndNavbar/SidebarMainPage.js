@@ -30,7 +30,7 @@ export default function SidebarMainPage() {
                         <MenuItem onClick={() =>  {localStorage.setItem("gameOption","3");navigate("/chooseCourseSubject")}}> Columns</MenuItem>
                         <MenuItem onClick={() => {localStorage.setItem("gameOption","4");navigate("/chooseCourseSubject")}}> Drag & Drop</MenuItem>
                     </SubMenu>
-                    <SubMenu title="Courses" onClick={() => navigate("/chooseCourseSubject")}>
+                    <SubMenu title="Courses" onClick={() => {localStorage.setItem("gameOption","5");navigate("/chooseCourseSubject")}}>
                     </SubMenu>
                     <SubMenu title="Contest" onClick={() => navigate("/contest")}>
                     </SubMenu>

@@ -248,7 +248,7 @@
     margin: 10px;
 }
 
-.confirm-button {
+.confirm-button-contest {
     transition: all .5s ease;
     position: relative;
     display: inline;
@@ -272,11 +272,11 @@
     margin: 10px;
 }
 
-.confirm-button:hover {
+.confirm-button-contest:hover {
     transform: scale(1.1);
 }
 
-.confirm-button-clicked {
+.confirm-button-contest-clicked {
     transform: scale(1.1);
     transition: all .5s ease;
     position: relative;
@@ -321,7 +321,7 @@
 
 .popup-inner {
     position: relative;
-    padding: 32px;
+    padding: 60px;
     width: 100%;
     max-width: 640px;
     background-color: white;
@@ -369,9 +369,69 @@
     transform: scale(1.1);
 }
 
-.highlight {
-    color:red;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 20px;
+.container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.podium__item {
+    width: 200px;
+}
+
+.podium__rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+}
+
+.podium__city {
+    text-align: center;
+    padding: 0 .5rem;
+}
+
+.podium__number {
+    width: 27px;
+    height: 75px;
+}
+
+.podium .first {
+    min-height: 300px;
+    background: rgb(255,172,37);
+    background:
+            linear-gradient(333deg,
+            rgba(255,172,37,1) 0%,
+            rgba(254,207,51,1) 13%,
+            rgba(254,224,51,1) 53%,
+            rgba(255,172,37,1) 100%);
+    font-size: 100px;
+}
+
+.podium .second {
+    min-height: 200px;
+    background: rgb(160, 160, 160);
+    background:
+            linear-gradient(333deg,
+            rgb(216, 216, 215) 0%,
+            rgb(248, 248, 247) 13%,
+            rgb(218, 218, 217) 53%,
+            rgb(162, 162, 160) 100%);
+    font-size: 80px;
+}
+
+.podium .third {
+    min-height: 100px;
+    background: rgb(118, 74, 3);
+    background:
+            linear-gradient(333deg,
+            rgb(179, 113, 6) 0%,
+            rgb(164, 88, 4) 13%,
+            rgb(171, 80, 8) 53%,
+            rgb(211, 139, 21) 100%);
+    font-size: 60px;
+}
+
+.podium-list {
+    text-align: left;
 }

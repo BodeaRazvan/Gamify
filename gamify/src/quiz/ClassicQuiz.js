@@ -5,7 +5,6 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 function ClassicQuiz() {
@@ -19,7 +18,7 @@ function ClassicQuiz() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarSimpleMainPage/>
+
             <div className="App" style={{fontFamily: "poppins"}}>
 
                 <header className="myHeader">

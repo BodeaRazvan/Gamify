@@ -1,5 +1,6 @@
 import '../App.css';
 import '../index.css';
+import './Streak.css';
 import 'react-pro-sidebar/dist/css/styles.css';
 import React, {useEffect} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
@@ -33,7 +34,7 @@ export default function StreakPage() {
                     <h1>Congratulations on your streak!</h1>
                     <Calendar className="react-calendar" tileClassName={({ date }) => {
                         if(mark.find(x => x === date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear())){
-                            return  'highlight' //(in Contest.css)
+                            return 'highlight'
                         }
                     }}
                     />

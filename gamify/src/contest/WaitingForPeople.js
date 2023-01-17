@@ -7,8 +7,6 @@ import React, {useEffect} from "react";
 import {useState} from "react";
 import { Dot } from 'react-animated-dots';
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarMainPage from "../sidebarAndNavbar/SidebarMainPage";
-import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 export default function WaitingForPeople() {
@@ -17,7 +15,12 @@ export default function WaitingForPeople() {
     const [contestMode] = useState(JSON.parse(localStorage.getItem("contestMode")));
     const [errorActivated, setErrorActivated] = useState(false);
     const [noOfContestants, setNoOfContestants] = useState(0);
-    const [invitedPlayers, setInvitedPlayers] = useState(JSON.parse(localStorage.getItem("invitedPlayers")))
+    const [invitedPlayers] = useState(JSON.parse(localStorage.getItem("invitedPlayers")))
+    const [randomUsers] = useState(
+        JSON.parse(localStorage.getItem("strangers")).map(player => {
+            return {...player, joined: false};
+        })
+    );
 
     const initializeNoOfInvitedPeople = () => {
         if(contestMode === "Invite friends"){
@@ -43,14 +46,23 @@ export default function WaitingForPeople() {
         const interval = setInterval(() => {
             setNoOfContestants(noOfContestants + 1)
 
-            const updatedInvitedPlayers = invitedPlayers.slice(0,noOfContestants + 1).map(player => {
-                if(!player.joined){
-                    return {...player, joined: true};
-                }
-                return player;
-            })
-            localStorage.setItem("players", JSON.stringify(updatedInvitedPlayers));
-
+            if(contestMode === "Invite friends"){
+                const updatedInvitedPlayers = invitedPlayers.slice(0,noOfContestants + 1).map(player => {
+                    if(!player.joined){
+                        return {...player, joined: true};
+                    }
+                    return player;
+                })
+                localStorage.setItem("players", JSON.stringify(updatedInvitedPlayers));
+            } else {
+                const updatedInvitedPlayers = randomUsers.slice(0,noOfContestants + 1).map(player => {
+                    if(!player.joined){
+                        return {...player, joined: true};
+                    }
+                    return player;
+                })
+                localStorage.setItem("players", JSON.stringify(updatedInvitedPlayers));
+            }
             localStorage.setItem("numberOfPlayers", JSON.stringify(noOfContestants + 1));
             if(noOfContestants > noOfInvitedPeople - 1){
                 navigate('/contestGettingReady');
@@ -70,7 +82,6 @@ export default function WaitingForPeople() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h2> {subject} </h2>
