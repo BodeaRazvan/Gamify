@@ -9,7 +9,7 @@ import {useNavigate} from "react-router";
 import React, {useEffect, useState} from "react";
 import GenerateAvatar from "../avatar/GenerateAvatar";
 
-function UniteTheColumns() {
+function UniteTheColumns2() {
 
     const [startRef1, setStartRef1] = useState("");
     const [endRef1, setEndRef1] = useState("");
@@ -122,7 +122,7 @@ function UniteTheColumns() {
                 setSeconds(60);
                 setFinished(true);
                 setSeconds(10);
-                setTimeout(() => {navigate("/uniteTheColumnsQuiz2")},10000);
+                setTimeout(() => {navigate("/goodJob")},10000);
                 checkAnswers();
             }
             return () => clearInterval(interval);
@@ -192,20 +192,20 @@ function UniteTheColumns() {
                     <div>
 
                         <div style={{position:"absolute",left:"15%", top:"40%"}}>
-                        <div style={{maxWidth:"400px"}} onClick={() => setClickedOption("A")} className="A">Who invented the spinning cup anemometer?</div>
+                        <div style={{maxWidth:"400px"}} onClick={() => setClickedOption("A")} className="A">What is the potential energy of an electron when it is far away from the nucleus?</div>
                         <br/>  <br/>
-                        <div style={{maxWidth:"400px"}} onClick={() => setClickedOption("B")} className="B">Who was the first person to design models of flying machine?</div>
+                        <div style={{maxWidth:"400px"}} onClick={() => setClickedOption("B")} className="B">Astrolabe is now replaced by</div>
                         <br/>  <br/>
-                        <div style={{maxWidth:"400px"}} onClick={() => setClickedOption("C")} className="C">Who invented Aqua-Lung?</div>
+                        <div style={{maxWidth:"400px"}} onClick={() => setClickedOption("C")} className="C">In a particular system, the unit of length, mass and time are chosen to be 10 cm, 10 g and 0.1 s respectively. The unit of force in this system will be equivalent to</div>
                         <br/>
                         </div>
 
                         <div style={{position:"absolute",left:"70%", top:"40%"}}>
-                        <div style={{maxWidth:"400px"}} onClick={() => handleDivClick1()} className="D">Leonardo da Vinci</div>
+                        <div style={{maxWidth:"400px"}} onClick={() => handleDivClick1()} className="D">Sextant</div>
                         <br/>  <br/>
-                        <div style={{maxWidth:"400px"}} onClick={() => handleDivClick2()} className="E">Thomas Romney Robinson (1846)</div>
+                        <div style={{maxWidth:"400px"}} onClick={() => handleDivClick2()} className="E">Zero</div>
                         <br/>  <br/>
-                        <div style={{maxWidth:"400px"}} onClick={() => handleDivClick3()} className="F">Jacques Cousteau (1943)</div>
+                        <div style={{maxWidth:"400px"}} onClick={() => handleDivClick3()} className="F">0.1 N</div>
                         </div>
 
                         {startRef1 && endRef1 && (
@@ -240,7 +240,7 @@ function UniteTheColumns() {
                     <button style={{position:"absolute",top:"80%"}} className={"myButton"}
                             onClick={() => {
                                 setSeconds(10);
-                                setTimeout(() => {navigate("/uniteTheColumnsQuiz2")},10000);
+                                setTimeout(() => {navigate("/goodJob")},10000);
                                 checkAnswers()
                             }}
                     > Confirm </button>
@@ -259,4 +259,4 @@ function UniteTheColumns() {
     );
 }
 
-export default UniteTheColumns;
+export default UniteTheColumns2;

@@ -39,6 +39,7 @@ import DragAndDrop from "./dragAndDrop/DragAndDrop";
 import GoodJobPage from "./quiz/GoodJobPage";
 
 import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
+import UniteTheColumns2 from "./uniteTheColumns/UniteTheColumns2";
 
 
 
@@ -93,6 +94,7 @@ function App() {
 
             {/* Unite the columns quiz */}
             <Route path="/uniteTheColumnsQuiz" element={<UniteTheColumns/>} />
+            <Route path="/uniteTheColumnsQuiz2" element={<UniteTheColumns2/>} />
 
         </Routes>
       </Router>
