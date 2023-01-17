@@ -4,8 +4,8 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React, {useEffect, useState} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
 import './ApproximateQuiz.css';
+import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 function ApproximationPage2() {
     const [answerClicked, setAnswerClicked] = useState(null);
@@ -58,7 +58,7 @@ function ApproximationPage2() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarCustom/>
+            <SidebarSimpleMainPage/>
 
             <div className="App" style={{fontFamily: "poppins"}}>
                 <header className="myHeader">
