@@ -1,0 +1,120 @@
+.start-quiz {
+    position: relative;
+    display: inline;
+    align-items: center;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: rgba(255, 120, 240, 0.84);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    height: 80px;
+    margin: 10px;
+}
+
+.lorem-quiz-text {
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    border: 3px solid #FF78F0;
+    box-shadow: 1px 2px 5px #3d1e3a;
+}
+
+.answer-button:hover {
+    transform: scale(1.1);
+}
+
+.answer-button, .answer-button-clicked, .answer-right, .answer-fade, .confirm-button, .answer-wrong, .confirm-button-clicked {
+    transition: all .5s ease;
+    position: relative;
+    display: inline;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    height: 80px;
+    margin: 10px;
+}
+
+.answer-button-clicked {
+    color: #ff9900;
+    background: white;
+}
+
+.answer-button {
+    color: white;
+    background: #ff9900;
+}
+
+.answer-right {
+    color: white;
+    background: rgba(72, 255, 0, 0.5);
+}
+
+.answer-fade {
+    color: white;
+    background: rgb(255, 153, 0);
+}
+
+.answer-wrong {
+    color: white;
+    background: rgba(255, 0, 30, 0.5);
+}
+
+.confirm-button {
+    color: #0c7541;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.6em 1em 0.6em 1em;
+    width: 160px;
+    height: 70px;
+    margin: 10px;
+}
+
+.confirm-button-clicked {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.6em 1em 0.6em 1em;
+    width: 160px;
+    height: 70px;
+    margin: 10px;
+}
+
+.timer {
+    color: white;
+
+}
+
+.textfield {
+    padding: 12px 20px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    width:400px;
+    height: 100px;
+    border-radius: 10px;
+    border: 3px solid #FF78F0;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

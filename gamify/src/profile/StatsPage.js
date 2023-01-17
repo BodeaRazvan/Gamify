@@ -7,7 +7,7 @@ import {useNavigate} from "react-router";
 import React, {useState} from "react";
 import './StatsPage.css';
 function StatsPage() {
-
+    const confetti = "https://media.giphy.com/media/VdidEvq6v8z8eNOldF/giphy.gif";
     let navigate = useNavigate();
     const goToLogin = () => {
         navigate('/login');
@@ -61,7 +61,7 @@ function StatsPage() {
 
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                    <div className="rectangularsContainer">
+                    <div className="rectangularsContainer" style={{position: 'relative'}}>
                         <h1 style={{color: "white"}}> Your stats </h1>
                         <div className="rectangularRow">
                             <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>
@@ -81,9 +81,9 @@ function StatsPage() {
                             <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Number of button clicks: 567</div>
                             <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Your average quiz score is in our top 5% </div>
                         </div>
-
                         <h1 style={{color: "white"}}> Keep up the good work! </h1>
                     </div>
+                    <img src={confetti} alt="confetti" style={{width: "100%", height: "50%", position: 'absolute'}}/>
                 </header>
             </div>
         </div>
