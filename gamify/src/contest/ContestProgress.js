@@ -7,7 +7,7 @@ import * as QandA from './ContestQuestionsAndAnswers';
 import {useNavigate} from "react-router";
 import React from "react";
 import {useState} from "react";
-import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
+import SidebarMainPage from "../sidebarAndNavbar/SidebarMainPage";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 import {useEffect} from "react";
 import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";

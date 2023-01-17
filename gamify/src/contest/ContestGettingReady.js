@@ -6,7 +6,7 @@ import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import {useState} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarCustom from "../sidebarAndNavbar/SidebarCustom";
+import SidebarMainPage from "../sidebarAndNavbar/SidebarMainPage";
 import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 export default function ContestGettingReady() {

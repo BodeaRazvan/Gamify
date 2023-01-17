@@ -5,7 +5,7 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React from "react";
 
-export default function SidebarCustom() {
+export default function SidebarMainPage() {
 
     let navigate = useNavigate();
 
