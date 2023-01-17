@@ -79,6 +79,8 @@ export default function SidebarProfile() {
                 </SubMenu>
                 <SubMenu title="Streak" onClick={() => {navigate("/streak")}}>
                 </SubMenu>
+                <SubMenu title="Connections" onClick={() => {navigate("/connections")}}>
+                </SubMenu>
             </Menu>
         </ProSidebar>
     );

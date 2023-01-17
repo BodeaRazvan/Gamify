@@ -6,8 +6,6 @@ import {useNavigate} from "react-router";
 import React, {useEffect} from "react";
 import {useState} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
-import SidebarMainPage from "../sidebarAndNavbar/SidebarMainPage";
-import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 export default function ContestGettingReady() {
 
@@ -30,7 +28,6 @@ export default function ContestGettingReady() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <div className="one-below-another">

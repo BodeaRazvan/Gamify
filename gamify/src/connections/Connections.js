@@ -2,7 +2,6 @@ import '../App.css';
 import '../index.css';
 import './Connections.css'
 import 'react-pro-sidebar/dist/css/styles.css';
-import {useNavigate} from "react-router";
 import React, {useState} from "react";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 import SidebarProfile from "../sidebarAndNavbar/SidebarProfile";
@@ -16,7 +15,11 @@ export default function Connections() {
         {username: 'claraRandall', requestSent: false},
         {username: 'julieOrtega', requestSent: false},
         {username: 'RobCarmichael', requestSent: false},
-        {username: 'CassandraPhillips', requestSent: false}
+        {username: 'CassandraPhillips', requestSent: false},
+        {username: 'robinHobb', requestSent: false},
+        {username: 'JoBeverly', requestSent: false},
+        {username: 'CeceliaHolland', requestSent: false},
+        {username: 'neilGaiman', requestSent: false},
     ]);
     localStorage.setItem("strangers", JSON.stringify(users));
     const [myConnections, setMyConnections] = useState([
@@ -26,12 +29,6 @@ export default function Connections() {
         {username: 'MariahStill', removed: false}
     ]);
     localStorage.setItem("myConnections", JSON.stringify(myConnections));
-
-    let navigate = useNavigate();
-
-    const goBack = () => {
-        navigate('/profile');
-    }
 
     const handleSendRequest = (event) => {
         const value = event.target.value;
@@ -113,9 +110,7 @@ export default function Connections() {
                                 </ul>
                             </div>
                         </div>
-
                     </div>
-                    <button className="go-back-button" onClick={goBack}> Go back </button>
                 </header>
             </div>
         </div>

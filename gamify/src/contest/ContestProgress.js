@@ -7,17 +7,15 @@ import * as QandA from './ContestQuestionsAndAnswers';
 import {useNavigate} from "react-router";
 import React from "react";
 import {useState} from "react";
-import SidebarMainPage from "../sidebarAndNavbar/SidebarMainPage";
 import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 import {useEffect} from "react";
-import SidebarSimpleMainPage from "../sidebarAndNavbar/SidebarSimpleMainPage";
 
 
 export default function ContestProgress() {
 
     const [subject] = useState(JSON.parse(localStorage.getItem("subjectForContest")));
 
-    const [time, setTime] = useState(10);
+    const [time, setTime] = useState(6);
     const [errorActivated, setErrorActivated] = useState(false);
     const [answerConfirmed, setAnswerConfirmed] = useState(false);
 
@@ -37,6 +35,7 @@ export default function ContestProgress() {
     localStorage.setItem("noOfCorrectAnswers", JSON.stringify(noOfCorrectAnswers))
 
     const [popupTriggered, setPopupTriggered] = useState(false);
+    const [popupTimeExpiredTriggered, setPopupTimeExpiredTriggered] = useState(false);
 
     let navigate = useNavigate();
 
@@ -45,7 +44,8 @@ export default function ContestProgress() {
             setTime(time - 1)
         },1000);
         if(time - 1 === -5){
-           setTime(10);
+           setTime(6);
+           setPopupTimeExpiredTriggered(false);
            if(firstQuestion) {
                setSecondQuestion(true);
            }
@@ -58,6 +58,9 @@ export default function ContestProgress() {
         }
         if(time - 1 === 0 && thirdQuestion){
             setDoneForMessage(true);
+        }
+        if(time === 0){
+            setPopupTimeExpiredTriggered(true);
         }
         return () => clearInterval(interval);
     }, [time]);
@@ -147,7 +150,7 @@ export default function ContestProgress() {
                 setAnswerA({answer: QandA.scienceQ3A1, selected: false, correct: false})
                 setAnswerB({answer: QandA.scienceQ3A2, selected: false, correct: false})
                 setAnswerC({answer: QandA.scienceQ3A3, selected: false, correct: false})
-                setAnswerD({answer: QandA.scienceQ2CorrectAnswer, selected: false, correct: true})
+                setAnswerD({answer: QandA.scienceQ3CorrectAnswer, selected: false, correct: true})
             }
         } else if (subject === "Mathematics"){
             if (firstQuestion){
@@ -169,7 +172,7 @@ export default function ContestProgress() {
                 setAnswerA({answer: QandA.mathQ3A1, selected: false, correct: false})
                 setAnswerB({answer: QandA.mathQ3A2, selected: false, correct: false})
                 setAnswerC({answer: QandA.mathQ3A3, selected: false, correct: false})
-                setAnswerD({answer: QandA.mathQ2CorrectAnswer, selected: false, correct: true})
+                setAnswerD({answer: QandA.mathQ3CorrectAnswer, selected: false, correct: true})
             }
         }
         if(done){
@@ -180,7 +183,6 @@ export default function ContestProgress() {
     return(
         <div>
             <NavbarCustom/>
-            <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h2> {subject} </h2>
@@ -193,22 +195,10 @@ export default function ContestProgress() {
                             }
                         </label>
                         :
-                        <div className="one-below-another">
-                            <label style={{margin: 20, fontSize: 30}}>
-                                {(isAnswerCorrect && answerConfirmed)
-                                    ? <label style={{color: 'green'}}> Congratulations! You answered correctly</label>
-                                    : ( answerConfirmed
-                                        ? <label style={{color: 'red'}}> Oh no... your answer is wrong</label>
-                                        : <label style={{color: 'red'}}> Oh no... your answer was not registered because you did not press confirm</label>)
-                                }
-                            </label>
-                            {doneForMessage
-                                ? <label style={{margin: 20, fontSize: 35}}> This was the last question. Now, let's see the ranking! </label>
-                                : <label style={{margin: 20, fontSize: 35}}> Get ready for the next question! </label>
-                            }
-                        </div>
+                        <label style={{margin: 20, fontSize: 30}}> Time:
+                            <label style={{color: 'red'}}>0</label>
+                        </label>
                     }
-
                     <label className="question-label"> Question: <b>{currentQuestion}</b></label>
                     <div className="two-cols-contest">
                         <button className={answerA.selected ? "A-button-clicked" : "A-button"}
@@ -231,7 +221,7 @@ export default function ContestProgress() {
                                 onClick={handleSelection}> D. {answerD.answer} </button>
                     </div>
                     <button
-                        className={answerConfirmed ? "confirm-button-clicked" : "confirm-button"}
+                        className={answerConfirmed ? "confirm-button-contest-clicked" : "confirm-button-contest"}
                         onClick={confirm}>
                         {answerConfirmed ? "Your answer was registered" : "Confirm"}
                     </button>
@@ -248,6 +238,21 @@ export default function ContestProgress() {
                             <button className="popup-button" onClick={exit}> Yes </button>
                             <button className="popup-button" onClick={() => setPopupTriggered(false)}> No </button>
                         </div>
+                    </Popup>
+                    <Popup trigger={popupTimeExpiredTriggered} setTrigger={setPopupTimeExpiredTriggered}>
+                        <label style={{margin: 20, fontSize: 30}}>
+                            {(isAnswerCorrect && answerConfirmed)
+                                ? <label style={{color: 'green'}}> Congratulations! You answered correctly</label>
+                                : ( answerConfirmed
+                                    ? <label style={{color: 'red'}}> Oh no... your answer is wrong</label>
+                                    : <label style={{color: 'red'}}> Oh no... your answer was not registered because you did not press confirm</label>)
+                            }
+                        </label>
+                        <br/><br/>
+                        {doneForMessage
+                            ? <label style={{fontSize: 35}}> This was the last question. Now, let's see the ranking! </label>
+                            : <label style={{fontSize: 35}}> Get ready for the next question! </label>
+                        }
                     </Popup>
                 </header>
             </div>
