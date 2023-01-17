@@ -40,6 +40,9 @@ import GoodJobPage from "./quiz/GoodJobPage";
 
 import UniteTheColumns from "./uniteTheColumns/UniteTheColumns";
 import UniteTheColumns2 from "./uniteTheColumns/UniteTheColumns2";
+import ApproximationPage1 from "./answerApproximation/approximatePage1";
+import ApproximationPage2 from "./answerApproximation/approximatePage2";
+import ApproximationPage3 from "./answerApproximation/approximatePage3";
 
 
 
@@ -96,6 +99,11 @@ function App() {
             <Route path="/uniteTheColumnsQuiz" element={<UniteTheColumns/>} />
             <Route path="/uniteTheColumnsQuiz2" element={<UniteTheColumns2/>} />
 
+
+            {/* Approximate quizz */}
+            <Route path="/approximatePage1" element={<ApproximationPage1/>} />
+            <Route path="/approximatePage2" element={<ApproximationPage2/>} />
+            <Route path="/approximatePage3" element={<ApproximationPage3/>} />
         </Routes>
       </Router>
   );
