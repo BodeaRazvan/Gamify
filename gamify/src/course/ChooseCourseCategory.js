@@ -22,7 +22,7 @@ export default function ChooseCourseCategory() {
             }else if (localStorage.getItem("gameOption") === "1"){
                 navigate('/classicQuiz');
             }else if (localStorage.getItem("gameOption") === "2"){
-                navigate('/approximateQuiz');
+                navigate('/approximatePage1');
             }else if (localStorage.getItem("gameOption") === "3"){
                 navigate('/uniteTheColumnsQuiz');
             }else if (localStorage.getItem("gameOption") === "5")
@@ -74,7 +74,7 @@ export default function ChooseCourseCategory() {
             <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily: "poppins"}}>
                 <header className="myHeader">
-                    <h1> Choose a category for course subject {localStorage.getItem("courseSubject")} </h1>
+                    <h1> Choose a category for subject {localStorage.getItem("courseSubject")} </h1>
                     <button className={physicsIsClicked ? "subject-button-clicked" : "subject-button"} value={"Physics"}
                             onClick={handleSelection}> Physics
                     </button>
