@@ -28,12 +28,25 @@ function GenerateAvatar() {
     const hat3 = "https://cdn.discordapp.com/attachments/1063774105096179722/1063795128369692672/hat3.png"
     const hat4 = "https://cdn.discordapp.com/attachments/1063774105096179722/1063795553047167016/hat4.png"
 
+
+    const trophy1 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262082888994856/T1.png"
+    const trophy2 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084868706394/T2.png"
+    const trophy3 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084663197696/T3.png"
+    const trophy4 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084411543562/T4.png"
+    const trophy5 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262084143091835/T5.png"
+    const trophy6 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083874672751/T6.png"
+    const trophy7 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083622998186/T7.png"
+    const trophy8 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083333603348/T8.png"
+    const trophy9 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083115503626/T9.png"
+
     const [faceImage,setFaceImage] = React.useState(0);
     const [hatImage,setHatImage] = React.useState(0);
+    const [trophyImage,setTrophyImage] = React.useState(0);
 
     useEffect(() => {
         setFaceImage(parseInt(localStorage.getItem("face")));
         setHatImage(parseInt(localStorage.getItem("hat")));
+        setTrophyImage(parseInt(localStorage.getItem("trophy")));
     },[]);
 
     return(
@@ -64,6 +77,20 @@ function GenerateAvatar() {
                 }
             </p>
 
+            <p style={{position:"relative",top:"-290px", left:"-60px"}}>
+                {
+                    trophyImage === 0 ? null:
+                        trophyImage === 1 ? <img src={trophy1} alt="trophy1" style={{width:"50px", height:"80px"}}/>:
+                            trophyImage === 2 ? <img src={trophy2} alt="trophy2" style={{width:"50px", height:"80px"}}/>:
+                                trophyImage === 3 ? <img src={trophy3} alt="trophy3" style={{width:"50px", height:"80px"}}/>:
+                                    trophyImage === 4 ? <img src={trophy4} alt="trophy4" style={{width:"50px", height:"80px"}}/>:
+                                        trophyImage === 5 ? <img src={trophy5} alt="trophy5" style={{width:"50px", height:"80px"}}/>:
+                                            trophyImage === 6 ? <img src={trophy6} alt="trophy6" style={{width:"50px", height:"80px"}}/>:
+                                                trophyImage === 7 ? <img src={trophy7} alt="trophy7" style={{width:"50px", height:"80px"}}/>:
+                                                    trophyImage === 8 ? <img src={trophy8} alt="trophy8" style={{width:"50px", height:"80px"}}/>:
+                                                        trophyImage === 9 ? <img src={trophy9} alt="trophy9" style={{width:"50px", height:"80px"}}/>:null
+                }
+            </p>
         </div>
     )
 

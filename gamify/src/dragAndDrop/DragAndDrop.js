@@ -82,7 +82,7 @@ function DragAndDrop() {
                 setSeconds(60);
                 setFinished(true);
                 setSeconds(10);
-                setTimeout(() => {navigate("/mainPage")},10000);
+                setTimeout(() => {navigate("/goodJob")},10000);
                 calculateResults();
             }
             return () => clearInterval(interval);
@@ -180,7 +180,7 @@ function DragAndDrop() {
 
                     <button style={{position:"absolute",top:"90%"}} className={"myButton"}
                         onClick={() => {setFinished(true);setSeconds(10);
-                            setTimeout(() => {navigate("/mainPage")},10000);
+                            setTimeout(() => {navigate("/goodJob")},10000);
                             calculateResults();
                         }}
                     > Confirm </button>

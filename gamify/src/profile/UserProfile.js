@@ -22,7 +22,7 @@ function UserProfile() {
     const trophy9 = "https://cdn.discordapp.com/attachments/1063774105096179722/1064262083115503626/T9.png"
 
     const [isDragging, setIsDragging] = React.useState(false);
-
+    const [trophyImage,setTrophyImage] = React.useState(0);
 
     let navigate = useNavigate();
     const goToLogin = () => {
@@ -73,39 +73,39 @@ function UserProfile() {
                     <SubMenu title="Trophies">
                         <MenuItem style={{maxHeight:"400px", overflow:"auto"}}>
                                 <Draggable>
-                                <img src={trophy1} alt="trophy1" style={{width: "50px", height: "80px"}}/>
+                                <img onClick={() => {localStorage.setItem('trophy',1);window.location.reload()}} src={trophy1} alt="trophy1" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy2} alt="trophy2" style={{width: "50px", height: "80px"}}/>
+                                <img onClick={() => {localStorage.setItem('trophy',2);window.location.reload()}} src={trophy2} alt="trophy2" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy3} alt="trophy3" style={{width: "50px", height: "80px"}}/>
+                                <img  onClick={() => {localStorage.setItem('trophy',3);window.location.reload()}} src={trophy3} alt="trophy3" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy4} alt="trophy4" style={{width: "50px", height: "80px"}}/>
+                                <img  onClick={() => {localStorage.setItem('trophy',4);window.location.reload()}} src={trophy4} alt="trophy4" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy5} alt="trophy5" style={{width: "50px", height: "80px"}}/>
+                                <img onClick={() => {localStorage.setItem('trophy',5);window.location.reload()}} src={trophy5} alt="trophy5" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy6} alt="trophy6" style={{width: "50px", height: "80px"}}/>
+                                <img  onClick={() => {localStorage.setItem('trophy',6);window.location.reload()}} src={trophy6} alt="trophy6" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy7} alt="trophy7" style={{width: "50px", height: "80px"}}/>
+                                <img  onClick={() => {localStorage.setItem('trophy',7);window.location.reload()}} src={trophy7} alt="trophy7" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy8} alt="trophy8" style={{width: "50px", height: "80px"}}/>
+                                <img  onClick={() => {localStorage.setItem('trophy',8);window.location.reload()}} src={trophy8} alt="trophy8" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                                 <br/>
                                 <Draggable>
-                                <img src={trophy9} alt="trophy9" style={{width: "50px", height: "80px"}}/>
+                                <img  onClick={() => {localStorage.setItem('trophy',9);window.location.reload()}} src={trophy9} alt="trophy9" style={{width: "50px", height: "80px"}}/>
                                 </Draggable>
                         </MenuItem>
 
