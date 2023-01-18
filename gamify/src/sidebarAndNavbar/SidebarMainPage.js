@@ -29,11 +29,13 @@ export default function SidebarMainPage() {
                         <MenuItem onClick={() =>  {localStorage.setItem("gameOption","2");navigate("/chooseCourseSubject")}}> Approximate</MenuItem>
                         <MenuItem onClick={() =>  {localStorage.setItem("gameOption","3");navigate("/chooseCourseSubject")}}> Columns</MenuItem>
                         <MenuItem onClick={() => {localStorage.setItem("gameOption","4");navigate("/chooseCourseSubject")}}> Drag & Drop</MenuItem>
-                        <MenuItem onClick={() => {navigate("/createQuiz")}}> Create Quiz</MenuItem>
                     </SubMenu>
                     <SubMenu title="Courses" onClick={() => {localStorage.setItem("gameOption","5");navigate("/chooseCourseSubject")}}>
                     </SubMenu>
                     <SubMenu title="Contest" onClick={() => navigate("/contest")}>
+                    </SubMenu>
+                    <SubMenu title="Your Quizzes">
+                        <MenuItem onClick={() => {navigate("/createQuiz")}}> Create Quiz</MenuItem>
                     </SubMenu>
                 </Menu>
             </ProSidebar>
