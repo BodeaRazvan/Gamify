@@ -58,7 +58,7 @@ export default function ChooseFriends() {
                 <header className="myHeader">
                     <h2> {subject} </h2>
                     <h1> Choose from your connections </h1>
-                    <div className="connections-list">
+                    <div className="connections-list" style={{backgroundColor:"#297f8d"}}>
                         <ul>
                             {myConnections.map((connection) => {
                                 return (
