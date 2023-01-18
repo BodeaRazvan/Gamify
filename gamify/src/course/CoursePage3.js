@@ -22,7 +22,7 @@ export default function CoursePage2() {
             <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily: "poppins"}}>
                 <header className="myHeader">
-                    <h1> Course on {localStorage.getItem("courseSubject")} > {localStorage.getItem("courseCategory")}</h1>
+                    <h1 style={{color: "#1ebbd0"}}> Course on {localStorage.getItem("courseSubject")} > {localStorage.getItem("courseCategory")}</h1>
 
                     <textarea className="lorem-text"  rows="30" cols="100"
                               value="Sed vehicula commodo risus, ut malesuada nisl sagittis vitae. Cras ut velit at mauris molestie lobortis non vitae erat. Fusce eu lobortis orci. Fusce volutpat leo at mi varius, non elementum ligula interdum. Maecenas in enim id libero sagittis euismod ac in nibh. Morbi ex orci, dictum et aliquet vel, molestie egestas mauris. Aliquam cursus ante sem, ut efficitur nulla mattis quis. Mauris tristique arcu quis mi ultrices, ut hendrerit magna feugiat. Ut ut est posuere, gravida ligula mollis, pellentesque augue. Donec ut bibendum diam, eget malesuada leo.
@@ -38,7 +38,7 @@ export default function CoursePage2() {
                                 Morbi ut ex eu enim accumsan sodales. Curabitur ultricies, nibh eget viverra feugiat, nisl justo elementum diam, mattis sagittis erat ex id nulla. Vestibulum quis ligula tempor erat tincidunt varius quis facilisis elit. In feugiat magna et justo placerat laoreet. Fusce nec turpis vitae lectus scelerisque tristique. Maecenas luctus tortor finibus urna laoreet mollis. In lobortis, dui quis feugiat aliquet, ex orci sollicitudin lorem, sit amet efficitur tortor metus a nibh. Mauris leo elit, varius vitae ultrices faucibus, varius sit amet magna. Donec sit amet est eu erat fermentum dapibus eu pretium justo. Donec posuere maximus dui. Aliquam pulvinar eleifend pulvinar. Duis consequat est justo, et feugiat nunc tristique eget. Quisque commodo ultricies arcu ut sagittis. Proin magna dui, rutrum non pretium et, faucibus sit amet nibh. In ultricies lacus lectus."
                               readOnly={true}>
                     </textarea>
-                    <h4 style={{color: "white"}} > Page 3/3 </h4>
+                    <h4 style={{color: "#1ebbd0"}} > Page 3/3 </h4>
                     <div>
                         <button className="go-back-button" onClick={goBack}> Go back</button>
                         <button className="next-button" onClick={goToNextPage}> Finish course </button>

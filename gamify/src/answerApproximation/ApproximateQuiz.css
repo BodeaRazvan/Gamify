@@ -67,7 +67,7 @@
 
 .answer-right {
     color: white;
-    background: rgba(72, 255, 0, 0.5);
+    background: rgba(66, 196, 17, 0.73);
 }
 
 .answer-fade {
@@ -82,6 +82,7 @@
 
 .confirm-button {
     color: #0c7541;
+    border: solid 2px #0cf581;
     background: rgba(255, 255, 255, 0.7);
     padding: 0.6em 1em 0.6em 1em;
     width: 160px;
@@ -89,14 +90,6 @@
     margin: 10px;
 }
 
-.confirm-button-clicked {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 0.6em 1em 0.6em 1em;
-    width: 160px;
-    height: 70px;
-    margin: 10px;
-}
 
 .timer {
     color: white;

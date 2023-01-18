@@ -23,8 +23,8 @@ function GoodJobNewQuiz() {
                 <br/>
                 <header className="myHeader">
                     <GenerateAvatar/>
-                    <h2>Congratulations, you earned a trophy!</h2>
-                    <h3>Your score: {score}</h3>
+                    <h2 style={{color: "#ffcc00"}}>Congratulations, you earned a trophy!</h2>
+                    <h3 style={{color: "#ecc739"}}>Your score: {score}</h3>
                     <img src={trophy1} alt="trophy1" style={{width: "100px", height: "100px"}}/>
                     <img src={confetti} alt="confetti" style={{width: "100%", height: "50%"}}/>
 

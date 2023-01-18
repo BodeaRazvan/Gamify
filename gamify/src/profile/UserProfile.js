@@ -26,7 +26,6 @@ function UserProfile() {
                     <div style={{position:"absolute", top:"10%", right:"53%"}}>
                       <GenerateAvatar/>
                     </div>
-                    Profile page
                 </header>
             </div>
         </div>

@@ -70,7 +70,7 @@ export default function Contest() {
         <div>
             <NavbarCustom/>
             <SidebarSimpleMainPage/>
-            <div className="App" style={{fontFamily:"poppins"}}>
+            <div className="contestApp" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <h1> Choose a subject </h1>
                     <button className={scienceIsClicked ? "subject-button-clicked" : "subject-button"} value={"Science"} onClick={handleSelection}> Science </button>

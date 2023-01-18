@@ -31,7 +31,7 @@ export default function StreakPage() {
             <SidebarProfile/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                    <h1>Congratulations on your streak!</h1>
+                    <h1 style={{color: "#a8499e"}}>Congratulations on your streak!</h1>
                     <Calendar className="react-calendar" tileClassName={({ date }) => {
                         if(mark.find(x => x === date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear())){
                             return 'highlight'

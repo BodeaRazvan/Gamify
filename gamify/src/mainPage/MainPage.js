@@ -5,19 +5,19 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import React, {useEffect} from "react";
 import GenerateAvatar from "../avatar/GenerateAvatar";
 import SidebarMainPage from "../sidebarAndNavbar/SidebarMainPage";
+import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
 
 
 function MainPage() {
 
     return(
         <div>
-            <Navbar/>
+            <NavbarCustom/>
             <SidebarMainPage/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <div className="mainPage">
                         <GenerateAvatar/>
-                        Main Page
                     </div>
 
                 </header>

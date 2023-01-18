@@ -15,7 +15,7 @@ export default function ContestProgress() {
 
     const [subject] = useState(JSON.parse(localStorage.getItem("subjectForContest")));
 
-    const [time, setTime] = useState(6);
+    const [time, setTime] = useState(15);
     const [errorActivated, setErrorActivated] = useState(false);
     const [answerConfirmed, setAnswerConfirmed] = useState(false);
 
@@ -44,7 +44,7 @@ export default function ContestProgress() {
             setTime(time - 1)
         },1000);
         if(time - 1 === -5){
-           setTime(6);
+           setTime(15);
            setPopupTimeExpiredTriggered(false);
            if(firstQuestion) {
                setSecondQuestion(true);

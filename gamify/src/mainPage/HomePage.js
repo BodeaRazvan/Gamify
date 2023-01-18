@@ -17,14 +17,11 @@ function HomePage() {
     return(
         <div>
             <Navbar sticky="top" className="navbar" style={{fontFamily:"poppins"}}>
-                <div>
-                    <button className="navbarButton" onClick={goToLogin}> Login </button>      <span> &nbsp; </span>
-                    <button className="navbarButton" onClick={goToRegister}> Register</button>
-                </div>
+
             </Navbar>
             <header className="myHeader" style={{fontFamily:"poppins"}}>
-                <h1> Gamify It </h1>
-                <div className="App">
+                <h1 style={{color: "#653862"}}> Gamify It </h1>
+                <div className="App" style={{color: "#1f616c"}}>
                     All the quizzes in the world
                 </div>
                 <p style={{marginBottom:"1.5em"}}/>
@@ -37,14 +34,9 @@ function HomePage() {
                     </Link>
                 </div>
                 <p style={{marginBottom:"5em"}}/>
-
             </header>
 
-            <div className="App" >
-                <header className="myHeader2" style={{fontFamily:"poppins"}}>
 
-                </header>
-            </div>
         </div>
     );
 }

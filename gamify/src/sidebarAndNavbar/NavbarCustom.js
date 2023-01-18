@@ -22,14 +22,9 @@ export default function NavbarCustom() {
             <div>
                 <p className="navBarTitle" style={{display: "inline", color: "white"}}>Gamify</p>
                 <p className="navBarStreak" style={{display: "inline", color: "white",  cursor: "pointer"}} onClick={goToStreakPage}>Streak:
-                    <p style={{display: "inline", color: "yellow",  cursor: "pointer"}} onClick={goToStreakPage}>
+                    <p style={{display: "inline", color: "#F5EA5A",  cursor: "pointer"}} onClick={goToStreakPage}>
                         12 days
                     </p></p>
-                <p className="navBarNotification" style={{display: "inline", color: "white"}}>Notifications:
-                    <p style={{display: "inline", color: "red"}}>
-                        3
-                    </p>
-                </p>
                 <button className="navbarButton" onClick={logOut}> Log out</button>
             </div>
         </Navbar>

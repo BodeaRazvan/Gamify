@@ -31,15 +31,15 @@ function LoginPage(){
             </Navbar>
         <div className="App">
             <header className="myHeader">
-                <h1> Login </h1>
-                <label> Username:</label>
+                <h1 style={{color: "#297f8d"}}> Login </h1>
+                <label style={{color: "#39b0c4"}}> Username:</label>
                 <input
                     ref={inputRefference}
                     type="text"
                     onChange={(e) => setUsername(e.target.value)}
                     id="username"
                 />
-                <label> Password:</label>
+                <label style={{color: "#39b0c4"}}> Password:</label>
                 <input
                     ref={inputRefference1}
                     type="password"

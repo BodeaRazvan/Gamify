@@ -6,6 +6,8 @@ import 'react-pro-sidebar/dist/css/styles.css';
 import {useNavigate} from "react-router";
 import React, {useState} from "react";
 import './StatsPage.css';
+import NavbarCustom from "../sidebarAndNavbar/NavbarCustom";
+import SidebarProfile from "../sidebarAndNavbar/SidebarProfile";
 function StatsPage() {
     const confetti = "https://media.giphy.com/media/VdidEvq6v8z8eNOldF/giphy.gif";
     let navigate = useNavigate();
@@ -22,66 +24,32 @@ function StatsPage() {
 
     return(
         <div>
-            <Navbar sticky="top" className="navbar" style={{fontFamily: "poppins"}}>
-                <div>
-                    <p className="navBarTitle" style={{display: "inline", color: "white"}}>Gamify</p>
-                    <p className="navBarStreak" style={{display: "inline", color: "white"}}>Streak:
-                        <p style={{display: "inline", color: "yellow"}}>
-                            12 days
-                        </p></p>
-                    <p className="navBarNotification" style={{display: "inline", color: "white"}}>Notifications:
-                        <p style={{display: "inline", color: "red"}}>
-                            3
-                        </p>
-                    </p>
-                    <button className="navbarButton" onClick={logOut}> Log out</button>
-                </div>
-            </Navbar>
-
-
-            <ProSidebar style={{
-                marginTop: 48,
-                position: "fixed",
-                fontFamily: "poppins",
-                sticky: "top",
-                width: "150px",
-                minWidth: "150px",
-                fontSize: "20px",
-            }} className="mySideBar">
-                <Menu iconShape="square">
-                    <MenuItem onClick={() => {navigate("/profile")}}>My Profile</MenuItem>
-                    <SubMenu title="My Avatar">
-                        <MenuItem onClick={() => navigate("/avatar")}> Create/Edit</MenuItem>
-                    </SubMenu>
-                    <SubMenu title="Streak">
-                        <MenuItem onClick={() => {}}> 12 days</MenuItem>
-                    </SubMenu>
-                </Menu>
-            </ProSidebar>
+            <NavbarCustom/>
+            <SidebarProfile/>
 
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
                     <div className="rectangularsContainer" style={{position: 'relative'}}>
-                        <h1 style={{color: "white"}}> Your stats </h1>
+                        <h1 style={{color: "#ffd500"}}> Your stats </h1>
                         <div className="rectangularRow">
-                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>
+                            <div className="rectangular" style={{backgroundColor: "#c880de"}}>
                                 Quizzes taken: 24 <br/>
                                 Most played category:  Science
                             </div>
-                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Contests Won: 5</div>
+                            <div className="rectangular" style={{backgroundColor: "#c880de"}}>Contests Won: 5</div>
                         </div>
                         <div className="rectangularRow">
-                            <div className="rectangular" style={{backgroundColor: "#ff9100"}}>
+                            <div className="rectangular" style={{backgroundColor: "#ef9e33"}}>
                                 Courses Taken: 12 <br/>
                                 Courses in progress: 2
                             </div>
-                            <div className="rectangular" style={{backgroundColor: "#ff9100"}}>Number of friends: 17</div>
+                            <div className="rectangular" style={{backgroundColor: "#ef9e33"}}>Number of friends: 17</div>
                         </div>
                         <div className="rectangularRow">
-                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Number of button clicks: 567</div>
-                            <div className="rectangular" style={{backgroundColor: "#A31ACB"}}>Your average quiz score is in our top 5% </div>
+                            <div className="rectangular" style={{backgroundColor: "#c880de"}}>Number of button clicks: 567</div>
+                            <div className="rectangular" style={{backgroundColor: "#c880de"}}>Your average quiz score is in our top 5% </div>
                         </div>
-                        <h1 style={{color: "white"}}> Keep up the good work! </h1>
+                        <h1 style={{color: "#ffd500"}}> Keep up the good work! </h1>
                     </div>
                     <img src={confetti} alt="confetti" style={{width: "100%", height: "50%", position: 'absolute'}}/>
                 </header>

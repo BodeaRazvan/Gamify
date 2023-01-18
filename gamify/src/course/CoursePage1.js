@@ -23,7 +23,7 @@ export default function CoursePage1() {
             <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily: "poppins"}}>
                 <header className="myHeader">
-                    <h1> Course on {localStorage.getItem("courseSubject")} > {localStorage.getItem("courseCategory")}</h1>
+                    <h1 style={{color: "#1ebbd0"}}> Course on {localStorage.getItem("courseSubject")} > {localStorage.getItem("courseCategory")}</h1>
 
                     {errorActivated ?
                         <label style={{margin: 10, color: "red"}}> You have to choose a subject </label>
@@ -40,7 +40,7 @@ export default function CoursePage1() {
                                 Pellentesque justo ex, accumsan tempus aliquam quis, egestas ut magna. Nulla et nulla posuere, venenatis justo id, luctus sapien. Aliquam accumsan vehicula eros et efficitur. Nulla ut lacus massa. Integer non velit et sem consectetur malesuada id vitae risus. Integer et odio faucibus, mollis elit in, laoreet massa. Praesent lobortis dui at turpis accumsan sodales. Mauris mattis mi mi, vitae lobortis lectus convallis sed. Vestibulum in sapien et nisl ornare interdum. Suspendisse orci libero, viverra nec magna sit amet, consequat finibus neque."
                               readOnly={true}>
                     </textarea>
-                    <h4 style={{color: "white"}} > Page 1/3 </h4>
+                    <h4 style={{color: "#1ebbd0"}} > Page 1/3 </h4>
                     <div>
                         <button className="go-back-button" onClick={goBack}> Go back</button>
                         <button className="next-button" onClick={goToNextPage}> Next page </button>

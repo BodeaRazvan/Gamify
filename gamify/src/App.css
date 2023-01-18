@@ -36,7 +36,7 @@
 }
 
 .myHeader3 {
-  background: #154944;
+  background: white;
   min-height: 40vh;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@
 }
 
 .myHeader {
-  background: linear-gradient(0deg, #154944  0%, rgb(169,184,195) 100%);
+  background: linear-gradient(0deg, #f7ebfc 0%, rgb(255, 255, 255) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@
 }
 
 .dragAndDropDiv {
-  background: linear-gradient(0deg, #154944  0%, rgb(169,184,195) 100%);
+  background: linear-gradient(0deg, white 0%, white 100%);
   min-height: 100vh;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -77,7 +77,7 @@
 
 
 .myHeader5 {
-  background: linear-gradient(0deg, #154944  0%, rgb(169,184,195) 100%);
+  background: linear-gradient(0deg, white 0%, white 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -191,7 +191,7 @@
   font-size: 25px;
   padding: 0.7em 1.4em 0.7em 1.1em;
   color: white;
-  background: #ff9100;
+  background: #97f8f0;
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
   letter-spacing: 0.05em;
@@ -237,19 +237,8 @@
 }
 
 
-.navbar{
-  width: 100%;
-  min-height: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  background: linear-gradient(0deg, #21726A 0%, #33B3A6 100%);
-}
-
 .navBarTitle{
   font-weight: bold;
-  font-style: italic;
   top: 0.5vh;
   font-size: calc(5px + 2vmin);
   color: white;
@@ -273,7 +262,6 @@
 
 .navBarStreak{
   font-weight: bold;
-  font-style: italic;
   top: 0.5vh;
   font-size: calc(2px + 2vmin);
   color: white;
@@ -367,7 +355,7 @@
   font-size: 25px;
   padding: 0.7em 1.4em 0.7em 1.1em;
   color: white;
-  background: #ff9100;
+  background: rgba(20, 144, 187, 0.83);
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
   letter-spacing: 0.05em;
@@ -389,7 +377,7 @@
   font-size: 25px;
   padding: 0.7em 1.4em 0.7em 1.1em;
   color: white;
-  background: #ff9100;
+  background: #c880de;
   box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
   letter-spacing: 0.05em;
   border-radius: 20em;
@@ -437,7 +425,7 @@
   font-weight: 400;
   font-size: 18px;
   color: white;
-  background: #ff9100;
+  background: #ffd500;
   box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
   letter-spacing: 0.05em;
   border-radius: 20em;
@@ -715,7 +703,7 @@
 }
 
 .myHeader-float {
-  background: linear-gradient(0deg, #154944  0%, rgb(169,184,195) 100%);
+  background: linear-gradient(0deg, white 0%, white 100%);
   min-height: 95vh;
   flex-direction: column;
   display: flow-root;
@@ -734,7 +722,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background: linear-gradient(0deg, #21726A 0%, #33B3A6 100%);
+  background: linear-gradient(0deg, rgba(214, 166, 229, 0.91) 0%, rgba(214, 166, 229, 0.91) 100%);
 }
 
 
@@ -748,8 +736,8 @@
   flex-direction: row;
   font-weight: 400;
   font-size: 18px;
-  color: white;
-  background: #ff9100;
+  color: #A31ACB;
+  background: white;
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em rgba(93, 78, 67, 0.6);
   letter-spacing: 0.05em;

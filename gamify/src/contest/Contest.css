@@ -1,3 +1,7 @@
+.contestApp {
+    background-color: #0cf581;
+}
+
 .subject-button {
     transition: all .5s ease;
     position: relative;

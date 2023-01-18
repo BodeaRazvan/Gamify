@@ -61,14 +61,14 @@ export default function Connections() {
             <SidebarProfile/>
             <div className="App" style={{fontFamily:"poppins"}}>
                 <header className="myHeader">
-                    <h1> Connections </h1>
+                    <h1 style={{color: "#c880de"}}> Connections </h1>
                     <div className="two-cols">
-                        <div style={{border: "5px solid pink", borderRadius: "20px", marginRight: "10px"}}>
+                        <div style={{border: "5px solid purple", borderRadius: "20px", marginRight: "10px", backgroundColor:"#ffcc00"}}>
                             <div>
                                 <label style={{margin: 10}}> Search for new connections: </label>
                                 <input style={{fontSize: 20}} type="text" placeholder="Search..." onChange={event => {setSearchTerm(event.target.value)}}/>
                             </div>
-                            <div className="users-list">
+                            <div className="users-list" >
                                 <ul>
                                     {users.filter((user => {
                                         if(searchTerm === ""){
@@ -91,7 +91,7 @@ export default function Connections() {
                                 </ul>
                             </div>
                         </div>
-                        <div style={{border: "5px solid white", borderRadius: "20px", marginLeft: "10px"}}>
+                        <div style={{border: "5px solid purple", borderRadius: "20px", marginLeft: "10px", backgroundColor:"#ffcc00"}}>
                             <h4> Your connections: </h4>
                             <div className="connections-list">
                                 <ul>

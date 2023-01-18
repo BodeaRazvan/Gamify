@@ -22,7 +22,7 @@ export default function CoursePage2() {
             <SidebarSimpleMainPage/>
             <div className="App" style={{fontFamily: "poppins"}}>
                 <header className="myHeader">
-                    <h1> Course on {localStorage.getItem("courseSubject")} > {localStorage.getItem("courseCategory")}</h1>
+                    <h1 style={{color: "#1ebbd0"}}> Course on {localStorage.getItem("courseSubject")} > {localStorage.getItem("courseCategory")}</h1>
 
                     <textarea className="lorem-text"  rows="30" cols="100"
                               value="Vestibulum pretium mauris eget leo rhoncus, et bibendum augue lacinia. In dignissim ligula porta tristique pellentesque. Fusce aliquam enim non lectus commodo dapibus. Curabitur semper lorem eros, porttitor sollicitudin erat gravida quis. Phasellus tempus dui ac nulla volutpat, at facilisis tortor viverra. Integer efficitur nisl non leo ultrices, ut ullamcorper arcu iaculis. Sed mi metus, feugiat a consectetur in, condimentum sit amet dolor. Proin ut lacus auctor, aliquam augue id, maximus lacus. Maecenas quis nisl varius ante faucibus condimentum. Sed tincidunt vitae dui vitae euismod.
@@ -37,7 +37,7 @@ export default function CoursePage2() {
                               Cras ultricies finibus aliquet. Etiam interdum elit nec elit luctus hendrerit. Donec condimentum non sapien nec feugiat. Curabitur lobortis auctor ex quis tempor. Ut at congue erat. Donec porttitor eros non elit scelerisque gravida eget sed ex. Vestibulum volutpat, ante at aliquam porttitor, diam sem bibendum purus, id consequat sem sem vel ligula. Donec imperdiet sapien non fringilla consectetur. Donec non libero in mauris dictum tempor."
                               readOnly={true}>
                     </textarea>
-                    <h4 style={{color: "white"}} > Page 2/3 </h4>
+                    <h4 style={{color: "#1ebbd0"}} > Page 2/3 </h4>
                     <div>
                         <button className="go-back-button" onClick={goBack}> Go back</button>
                         <button className="next-button" onClick={goToNextPage}> Next page </button>

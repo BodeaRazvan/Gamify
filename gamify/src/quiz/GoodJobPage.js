@@ -22,8 +22,8 @@ function GoodJobPage() {
                 <br/>
                 <header className="myHeader">
                     <GenerateAvatar/>
-                    <h2>Congratulations, you earned a trophy!</h2>
-                    <h3>Your score: 2/3</h3>
+                    <h2 style={{color: "#ffcc00"}}>Congratulations, you earned a trophy!</h2>
+                    <h3 style={{color: "#ecc739"}}>Your score: 2/3</h3>
                     <img src={trophy1} alt="trophy1" style={{width: "100px", height: "150px"}}/>
                     <img src={confetti} alt="confetti" style={{width: "100%", height: "50%"}}/>
 
